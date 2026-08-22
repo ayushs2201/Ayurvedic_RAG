@@ -17,7 +17,7 @@ This project builds a **grounded, retrieval-augmented assistant** over a curated
 - **Underexplored domain:** Few RAG projects touch traditional/complementary medicine — room for original contribution rather than a saturated use case.
 - **Real tension for faithfulness testing:** The corpus mixes classical remedies with modern evidence reviews that explicitly hedge ("no clinical evidence yet") — ideal ground truth for testing whether a RAG system preserves uncertainty instead of overclaiming.
 - **Global, low-cost relevance:** Practised and studied on every continent; guidance is largely diet-, herb-, and lifestyle-based rather than dependent on costly interventions.
-- **Real stakeholders:** health-conscious individuals, Ayurvedic students/practitioners, researchers, and the herbal/wellness industry.
+- **Real stakeholders:** Ayurvedic students/practitioners, researchers worldwide.
 
 ## Dataset
 
@@ -71,7 +71,7 @@ Data Sources → Preprocessing → Embedding → Vector Search → LLM Generatio
 
 ## Roadmap
 
-- [ ] Finalise curated document subset
+- [ ] Preprocess corpus using NLP Technique
 - [ ] Build baseline RAG pipeline
 - [ ] Build test-question set + evaluation harness
 - [ ] Tune retrieval & prompting against evaluation results
