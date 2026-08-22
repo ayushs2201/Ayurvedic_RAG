@@ -77,9 +77,18 @@ Data Sources → Preprocessing → Embedding → Vector Search → LLM Generatio
 - [ ] Tune retrieval & prompting against evaluation results
 - [ ] Package demo app and final report
 
+
 ## Team
 
-Group 22 — RMIT University, Master of Data Science (MC267)
+**Group 22** — RMIT University, Case Studies in Data Science
+
+| Student ID | Name | Role |
+|---|---|---|
+| s4210909 | Ayush Vijayprasad Shrivastava | Technical Lead |
+| s4054011 | Rose Munro | Project Manager |
+| s4224187 | Tariq Iqbal | Research Director |
+| s4234819 | Vivyn Madhanraj | Product and Evaluation Lead |
+
 
 ## License
 
