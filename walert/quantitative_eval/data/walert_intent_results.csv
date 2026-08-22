@@ -1,0 +1,245 @@
+question,actual,expected
+What Ayurvedic treatments are effective for managing PCOS symptoms?,WomensHealth_PCOS,WomensHealth_PCOS
+How can Ayurveda help with hypothyroidism?,WomensHealth_Thyroid,WomensHealth_Thyroid
+What can help alleviate severe PMS symptoms?,WomensHealth_PMS,WomensHealth_PMS
+Why is managing stress important in PCOS treatment?,WomensHealth_PCOS,WomensHealth_PCOS
+Are there dietary changes that can support thyroid function?,WomensHealth_Thyroid,WomensHealth_Thyroid
+What role do herbs play in managing PMS?,WomensHealth_PMS,WomensHealth_PMS
+How can lifestyle changes impact PCOS management?,WomensHealth_PCOS,WomensHealth_PCOS
+What should I avoid if I have an underactive thyroid?,WomensHealth_Thyroid,WomensHealth_Thyroid
+Can yoga help with PMS symptoms?,WomensHealth_PMS,WomensHealth_PMS
+What are the Ayurvedic perspectives on managing PCOS effectively?,WomensHealth_PCOS,WomensHealth_PCOS
+How does Ayurveda approach the treatment of hypothyroidism?,WomensHealth_Thyroid,WomensHealth_Thyroid
+What should I do about severe PMS symptoms according to Ayurveda?,WomensHealth_PMS,WomensHealth_PMS
+What lifestyle changes can help manage PCOS?,WomensHealth_PCOS,WomensHealth_PCOS
+Are there any natural remedies in Ayurveda for hyperthyroidism?,WomensHealth_Thyroid,WomensHealth_Thyroid
+Why do I experience strong mood swings with PMS?,WomensHealth_PMS,WomensHealth_PMS
+Can yoga really help with PCOS symptoms?,WomensHealth_PCOS,WomensHealth_PCOS
+How can diet influence my thyroid health?,WomensHealth_Thyroid,WomensHealth_Thyroid
+What herbal treatments are recommended for alleviating PMS symptoms?,WomensHealth_PMS,WomensHealth_PMS
+Is there a connection between weight management and PCOS?,WomensHealth_PCOS,WomensHealth_PCOS
+What is the Ayurvedic understanding of PCOS and how can I manage my symptoms naturally?,WomensHealth_PCOS,WomensHealth_PCOS
+How does Ayurveda approach hypothyroidism?,WomensHealth_Thyroid,WomensHealth_Thyroid
+What can I do to alleviate severe PMS symptoms naturally?,WomensHealth_PMS,WomensHealth_PMS
+Is there an Ayurvedic remedy for weight management in PCOS?,WomensHealth_PCOS,WomensHealth_PCOS
+What lifestyle changes are recommended for someone with Hashimoto's thyroiditis in Ayurveda?,WomensHealth_Thyroid,WomensHealth_Thyroid
+How can I balance my emotions during PMS using Ayurvedic practices?,WomensHealth_PMS,WomensHealth_PMS
+Can stress management contribute to improving PCOS symptoms?,WomensHealth_PCOS,WomensHealth_PCOS
+Are there specific Ayurvedic foods I should consume to support my thyroid health?,WomensHealth_Thyroid,WomensHealth_Thyroid
+What Ayurvedic treatments can help with bloating during PMS?,WomensHealth_PMS,WomensHealth_PMS
+"What causes PCOS in Ayurvedic terms, and how can I naturally manage it?",WomensHealth_PCOS,WomensHealth_PCOS
+"How does Ayurveda view hypothyroidism, and what treatments are available?",WomensHealth_Thyroid,WomensHealth_Thyroid
+Can Ayurveda help alleviate the symptoms of PMS?,WomensHealth_PMS,WomensHealth_PMS
+Are there specific Ayurvedic diets recommended for managing PCOS?,WomensHealth_PCOS,WomensHealth_PCOS
+What lifestyle changes can I adopt to support my thyroid health according to Ayurveda?,WomensHealth_Thyroid,WomensHealth_Thyroid
+"Why do I experience migraines during my menstrual cycle, and how can Ayurveda help?",WomensHealth_PMS,WomensHealth_PMS
+What role does stress play in PCOS management according to Ayurvedic principles?,WomensHealth_PCOS,WomensHealth_PCOS
+What Ayurvedic herbs can support my thyroid function?,WomensHealth_Thyroid,WomensHealth_Thyroid
+How can I manage mood swings associated with PMS from an Ayurvedic perspective?,WomensHealth_PMS,WomensHealth_PMS
+What is PCOS and how does Ayurveda approach its management?,WomensHealth_PCOS,WomensHealth_PCOS
+How does Ayurveda explain hypothyroidism and its treatment?,WomensHealth_Thyroid,WomensHealth_Thyroid
+What causes PMS symptoms and how can Ayurveda help alleviate them?,WomensHealth_PMS,WomensHealth_PMS
+Are there specific diets recommended for managing PCOS in Ayurveda?,WomensHealth_PCOS,WomensHealth_PCOS
+What lifestyle changes can support thyroid health according to Ayurveda?,WomensHealth_Thyroid,WomensHealth_Thyroid
+"Can stress impact PMS symptoms, and how does Ayurveda suggest managing it?",WomensHealth_PMS,WomensHealth_PMS
+Is weight management essential for PCOS treatment in Ayurveda?,WomensHealth_PCOS,WomensHealth_PCOS
+What herbs are beneficial for managing thyroid disorders in Ayurveda?,WomensHealth_Thyroid,WomensHealth_Thyroid
+How does Ayurveda suggest managing mood swings related to PMS?,WomensHealth_PMS,WomensHealth_PMS
+What is the Ayurvedic perspective on Polycystic Ovary Syndrome (PCOS)?,WomensHealth_PCOS,WomensHealth_PCOS
+How does Ayurveda treat hypothyroidism?,WomensHealth_Thyroid,WomensHealth_Thyroid
+What can I do about severe PMS symptoms naturally?,WomensHealth_PMS,WomensHealth_PMS
+Can Ayurvedic herbs really help reduce the symptoms of PCOS?,WomensHealth_PCOS,WomensHealth_PCOS
+What causes thyroid disorders from an Ayurvedic perspective?,WomensHealth_Thyroid,WomensHealth_Thyroid
+How can I manage mood swings associated with PMS in Ayurveda?,WomensHealth_PMS,WomensHealth_PMS
+Are there dietary recommendations for managing PCOS?,WomensHealth_PCOS,WomensHealth_PCOS
+How does stress impact thyroid health from an Ayurvedic viewpoint?,WomensHealth_Thyroid,WomensHealth_Thyroid
+What Ayurvedic practices can help relieve physical discomfort during PMS?,WomensHealth_PMS,WomensHealth_PMS
+Is exercise important in managing PCOS symptoms?,WomensHealth_PCOS,WomensHealth_PCOS
+"What causes weight gain in Ayurveda, and how can it be managed?",Metabolic,Metabolic
+How does Ayurveda address insulin resistance?,Metabolic,Metabolic
+What role does digestive health play in managing diabetes?,Metabolic,Metabolic
+Is high blood pressure treatable through Ayurvedic methods?,Metabolic,Metabolic
+What dietary changes are recommended for someone with high cholesterol?,Metabolic,Metabolic
+Can Ayurvedic practices help with cravings and overeating?,Metabolic,Metabolic
+What Ayurvedic herbs are effective in managing metabolic syndrome?,Metabolic,Metabolic
+How can lifestyle changes impact blood pressure in Ayurveda?,Metabolic,Metabolic
+What is the importance of Agni in weight management?,Metabolic,Metabolic
+What are the signs of a disturbed Agni related to metabolic issues?,Metabolic,Metabolic
+What causes uncontrolled weight gain in my case?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+How does Ayurveda approach diabetes management?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+"Why is my blood pressure so high, and what can I do to lower it?",Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+Can Ayurveda help me lose weight sustainably?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+What role does digestion (Agni) play in managing diabetes?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+Is stress contributing to my high blood pressure?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+What are the signs of Ama in my body related to my metabolic health?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+Can herbal supplements help manage my weight and diabetes?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+What lifestyle changes can I make to lower my risk of developing diabetes?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+How does Ayurveda prescribe the treatment of hypertension?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+"What is the primary Ayurvedic cause of weight gain, and how can I manage it effectively?",Metabolic,Metabolic
+"How does diabetes manifest according to Ayurveda, and what can I do to prevent or manage it?",Metabolic,Metabolic
+"Why do I experience fluctuating blood pressure, and what Ayurvedic practices can help stabilize it?",Metabolic,Metabolic
+Can you explain how Ama affects my metabolism and what steps I can take to reduce it?,Metabolic,Metabolic
+What role does Agni play in my ability to maintain a healthy weight?,Metabolic,Metabolic
+What are the Ayurvedic recommendations for managing insulin resistance?,Metabolic,Metabolic
+How can I use Ayurvedic herbs to help lower my high blood pressure?,Metabolic,Metabolic
+Is there a connection between emotional health and metabolic disorders in Ayurveda?,Metabolic,Metabolic
+What dietary changes would you recommend for someone with a predisposition to metabolic syndrome?,Metabolic,Metabolic
+"Can lifestyle habits impact my metabolism, and what changes should I consider implementing?",Metabolic,Metabolic
+What role does Agni play in weight management?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+How does an imbalance in Doshas contribute to diabetes?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+What is the Ayurvedic approach to managing high blood pressure?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+Can Ayurveda help with obesity issues? How?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+Is there an Ayurvedic herbal remedy for controlling blood sugar?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+What dietary changes are recommended for someone with elevated cholesterol?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+"How does stress impact metabolic health, and what can I do about it?",Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+What lifestyle changes can help in reducing body fat?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+Can Ayurveda help prevent metabolic syndrome?,Metabolic_WeightDiabetesBP,Metabolic_WeightDiabetesBP
+What are the Ayurvedic recommendations for managing weight gain?,Metabolic,Metabolic
+How can Ayurveda help control diabetes?,Metabolic,Metabolic
+What lifestyle changes can help with high blood pressure?,Metabolic,Metabolic
+Can Ayurveda cure insulin resistance?,Metabolic,Metabolic
+What are the Ayurvedic dietary guidelines for a diabetic patient?,Metabolic,Metabolic
+How is obesity viewed in Ayurveda?,Metabolic,Metabolic
+What Ayurvedic herbs are beneficial for enhancing metabolism?,Metabolic,Metabolic
+What is the role of Agni in weight management?,Metabolic,Metabolic
+How can stress impact metabolic health according to Ayurveda?,Metabolic,Metabolic
+Is fasting beneficial for metabolic health in Ayurveda?,Metabolic,Metabolic
+What can be the cause of my persistent acidity and how can Ayurveda help?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+What role does Agni play in digestion and how can I strengthen it?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+"Why do I get bloated after eating certain foods, and what can I do?",Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+How can I identify if I have Ama in my body?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+"Can stress impact my digestive health, and what can Ayurveda offer?",Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+What dietary changes can help with IBS symptoms?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+How does Ayurveda approach the treatment of gastritis?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+Are there specific herbs I can take to improve my digestion?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+What lifestyle changes can improve my overall digestive health?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+"I often experience heartburn, especially at night. How can I manage this naturally?",Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+What causes my frequent bloating and gas after meals?,Digestion,Digestion
+"Why do I experience acid reflux, especially at night?",Digestion,Digestion
+Can stress impact my digestive health and contribute to IBS?,Digestion,Digestion
+What dietary changes can I make to alleviate my symptoms of IBS?,Digestion,Digestion
+"Why do I have cravings for sweets, even when I'm not hungry?",Digestion,Digestion
+How can I determine if my digestive issues are due to Ama?,Digestion,Digestion
+What are natural remedies for severe acidity?,Digestion,Digestion
+Is it normal to experience alternating constipation and diarrhea?,Digestion,Digestion
+How can Ayurveda help with chronic digestive issues?,Digestion,Digestion
+Are there specific foods to improve my digestive fire (Agni)?,Digestion,Digestion
+"What causes chronic acidity, and how can Ayurveda help?",Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+Why do I experience bloating and gas after meals?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+I have alternating bouts of diarrhea and constipation. What does Ayurveda suggest?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+How can I enhance my digestion and appetite naturally?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+Are spicy foods bad for my acidity problem?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+What role does stress play in my digestive issues?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+What dietary changes should I make for IBS?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+How can I naturally relieve constipation?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+Is it safe to take herbal supplements for digestion?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+What lifestyle practices can support better digestion?,Digestion_AgniIBSAcidity,Digestion_AgniIBSAcidity
+"What causes my frequent bloating and gas, and how can Ayurveda help?",Digestion,Digestion
+I often experience acid reflux. What is the underlying cause in Ayurvedic terms?,Digestion,Digestion
+What can I do to improve my weak digestion and frequent constipation?,Digestion,Digestion
+How can I manage my Irritable Bowel Syndrome (IBS) naturally?,Digestion,Digestion
+What dietary changes should I make to reduce acidity?,Digestion,Digestion
+"Why do I have food sensitivities, and how can Ayurveda address this?",Digestion,Digestion
+"Can stress affect my digestion, and how can I alleviate this?",Digestion,Digestion
+I have a bitter taste in my mouth and frequent heartburn; what does this indicate?,Digestion,Digestion
+What role does Ayurveda suggest for cleansing the digestive system?,Digestion,Digestion
+How can I prevent indigestion after meals?,Digestion,Digestion
+"What are the causes of frequent acne breakouts in my teenage years, and how can Ayurveda help?",SkinHair_PittaDetox,SkinHair_PittaDetox
+How can I treat my oily scalp and dandruff using Ayurvedic principles?,SkinHair_PittaDetox,SkinHair_PittaDetox
+What role does diet play in managing skin conditions like eczema?,SkinHair_PittaDetox,SkinHair_PittaDetox
+Can Ayurveda help with premature graying of hair?,SkinHair_PittaDetox,SkinHair_PittaDetox
+What should I do about my sensitive skin that reacts to products?,SkinHair_PittaDetox,SkinHair_PittaDetox
+How does hydration affect my skin health according to Ayurveda?,SkinHair_PittaDetox,SkinHair_PittaDetox
+What home remedies can I use to soothe sunburned skin?,SkinHair_PittaDetox,SkinHair_PittaDetox
+How can I improve the health and luster of my hair?,SkinHair_PittaDetox,SkinHair_PittaDetox
+What should I consider when dealing with psoriasis?,SkinHair_PittaDetox,SkinHair_PittaDetox
+How can seasonal changes affect my skin and hair health?,SkinHair_PittaDetox,SkinHair_PittaDetox
+What causes my acne and how can I treat it using Ayurveda?,SkinHair_PittaDetox,SkinHair_PittaDetox
+"Why am I experiencing excessive hair fall, and what can I do about it?",SkinHair_PittaDetox,SkinHair_PittaDetox
+What home remedies can help with my hyperpigmentation?,SkinHair_PittaDetox,SkinHair_PittaDetox
+How can I soothe my sunburn using Ayurvedic methods?,SkinHair_PittaDetox,SkinHair_PittaDetox
+What is the role of detoxification in regaining healthy skin?,SkinHair_PittaDetox,SkinHair_PittaDetox
+What dietary changes should I make to improve my scalp health?,SkinHair_PittaDetox,SkinHair_PittaDetox
+Why am I experiencing itchy skin and how can Ayurveda help?,SkinHair_PittaDetox,SkinHair_PittaDetox
+What Ayurvedic herbs can help rejuvenate my skin?,SkinHair_PittaDetox,SkinHair_PittaDetox
+How does stress impact my hair health and what can I do?,SkinHair_PittaDetox,SkinHair_PittaDetox
+"Why does my skin become oily and prone to acne, especially in the summer?",SkinHair_PittaDetox,SkinHair_PittaDetox
+What can I do to treat my scalp that is often itchy and exhibits flaking?,SkinHair_PittaDetox,SkinHair_PittaDetox
+I have dark circles under my eyes; what causes this in Ayurvedic terms?,SkinHair_PittaDetox,SkinHair_PittaDetox
+How can I reduce inflammation and redness on my skin?,SkinHair_PittaDetox,SkinHair_PittaDetox
+What Ayurvedic treatments are effective for hair loss linked to stress?,SkinHair_PittaDetox,SkinHair_PittaDetox
+My skin often appears dull and lifeless; what could be the reason?,SkinHair_PittaDetox,SkinHair_PittaDetox
+How can I manage excessive sweating and body odor?,SkinHair_PittaDetox,SkinHair_PittaDetox
+"What can I do for skin hyperpigmentation, especially after acne?",SkinHair_PittaDetox,SkinHair_PittaDetox
+What lifestyle changes can help strengthen my hair and improve its texture?,SkinHair_PittaDetox,SkinHair_PittaDetox
+How can I deal with heat rash during the hot months?,SkinHair_PittaDetox,SkinHair_PittaDetox
+Why am I feeling constantly tired and unable to concentrate at work?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+I have trouble falling asleep and wake up frequently during the night; what could be the cause?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+"How can I manage stress better, especially during busy work periods?",ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What dietary changes should I make to improve my overall well-being?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+I've been dealing with corporate burnout; how can Ayurveda help me recover?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+Can yoga really help with my anxiety and stress levels?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What role does Agni play in stress management?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+How does seasonal change affect my mental wellness?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What are some natural remedies to improve focus and productivity?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+How can I create a better work-life balance according to Ayurvedic principles?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+Why do I feel constantly fatigued despite getting enough sleep?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+How can I manage stress that is affecting my sleep?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What natural remedies can help with symptoms of burnout?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+"I have trouble concentrating during work, what can I do to improve focus?",ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What role does Ayurveda play in managing anxiety related to work pressure?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+How can I naturally improve my sleep cycle?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What lifestyle changes can help with chronic headaches due to workplace stress?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+I often wake up in the middle of the night; what could be causing this?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+Is there an Ayurvedic approach to improve work-life balance?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+How does diet influence my mood and energy levels?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+Why do I feel constantly exhausted despite getting enough sleep?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What Ayurvedic advice can help me manage workplace stress effectively?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+How can I improve my sleep quality naturally?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+Why do I experience frequent headaches in a corporate environment?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What can I do to combat feelings of burnout?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+Can Ayurveda help address anxiety related to corporate pressures?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What dietary changes can help reduce stress levels?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+How do I strengthen my immune system while dealing with stress?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+Why am I having difficulty concentrating at work?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+How can I manage irritability caused by stress at work?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What causes my sleep disturbances during periods of high work stress?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+Why do I experience fatigue and burnout despite getting enough sleep?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+How can I manage my anxiety related to corporate deadlines?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What natural remedies can help me deal with corporate burnout?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What dietary changes can support better sleep?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+Why do I feel mentally foggy and unfocused at work?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+How does emotional eating connect to my stress levels?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What lifestyle changes can I make to combat daily stress?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+Is there a connection between my digestion and my emotional health?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+What role does routine play in dealing with stress?,ModernLifestyle_StressSleepCorporateBurnout,ModernLifestyle_StressSleepCorporateBurnout
+I feel lethargic and slow in the winter months. Why is that?,DoshaLogic,DoshaLogic
+Why do I have constant digestive issues during the summer?,DoshaLogic,DoshaLogic
+Can my emotional state affect my physical health according to Ayurveda?,DoshaLogic,DoshaLogic
+"I've been feeling anxious and restless, what might be the cause?",DoshaLogic,DoshaLogic
+What is the relationship between seasonal changes and dosha imbalances?,DoshaLogic,DoshaLogic
+I notice my skin becomes oily and breaks out in the summer. Why is that?,DoshaLogic,DoshaLogic
+How can I balance my Kapha during the monsoon season?,DoshaLogic,DoshaLogic
+Why do I crave sweet foods during the winter?,DoshaLogic,DoshaLogic
+Can my diet affect my dosha balance and overall health?,DoshaLogic,DoshaLogic
+I feel energetic and active in the spring but sluggish in the fall. Why is that?,DoshaLogic,DoshaLogic
+I am always feeling anxious and restless. Could this be related to my Dosha?,DoshaLogic_PrakritiVikritiSeasons,DoshaLogic_PrakritiVikritiSeasons
+Why do I experience digestive issues during the winter season?,DoshaLogic_PrakritiVikritiSeasons,DoshaLogic_PrakritiVikritiSeasons
+Can my skin conditions be related to my Ayurvedic constitution?,DoshaLogic_PrakritiVikritiSeasons,DoshaLogic_PrakritiVikritiSeasons
+"I feel fatigued and unmotivated, especially during the rainy season. Why is this happening?",DoshaLogic_PrakritiVikritiSeasons,DoshaLogic_PrakritiVikritiSeasons
+How can I maintain a balance during seasonal changes?,DoshaLogic_PrakritiVikritiSeasons,DoshaLogic_PrakritiVikritiSeasons
+I notice that I get more colds and allergies in fall. Can my constitution affect this?,DoshaLogic_PrakritiVikritiSeasons,DoshaLogic_PrakritiVikritiSeasons
+Why do I feel more irritable and hot-tempered in the summer?,DoshaLogic_PrakritiVikritiSeasons,DoshaLogic_PrakritiVikritiSeasons
+I've been gaining weight and feeling sluggish. What could be the underlying Dosha issue?,DoshaLogic_PrakritiVikritiSeasons,DoshaLogic_PrakritiVikritiSeasons
+Can my diet affect my Dosha balance throughout the year?,DoshaLogic_PrakritiVikritiSeasons,DoshaLogic_PrakritiVikritiSeasons
+I often feel bloated and uncomfortable after meals. What should I consider?,DoshaLogic_PrakritiVikritiSeasons,DoshaLogic_PrakritiVikritiSeasons
+Why do I feel more anxious during the summer months?,DoshaLogic,DoshaLogic
+Can changes in my diet influence my dosha balance and overall health?,DoshaLogic,DoshaLogic
+How can I determine my Prakriti and Vikriti?,DoshaLogic,DoshaLogic
+What should I do if my Vikriti keeps changing every season?,DoshaLogic,DoshaLogic
+Why do I experience digestive issues in the fall?,DoshaLogic,DoshaLogic
+How can seasonal changes affect my energy levels?,DoshaLogic,DoshaLogic
+What lifestyle changes can help me stay balanced during winter?,DoshaLogic,DoshaLogic
+Is it true that our dosha can change with age?,DoshaLogic,DoshaLogic
+How do I know if I have an accumulation of Ama in my system?,DoshaLogic,DoshaLogic
+Can stress impact my dosha balance?,DoshaLogic,DoshaLogic

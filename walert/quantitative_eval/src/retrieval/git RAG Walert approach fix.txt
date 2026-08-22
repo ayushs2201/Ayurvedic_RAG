@@ -1,0 +1,1146 @@
+
+
+
+
+
+
+
+
+
+
+
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python data.py
+(244, 9)
+  question_id  subtopic passage_id  relevance_judgment
+0     T001Q01         0       P001                   2
+1     T002Q01         0       P002                   2
+2     T003Q01         0       P003                   2
+3     T004Q01         0       P004                   2
+4     T005Q01         0       P005                   2
+ba(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash index.sh
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\index\faiss.py", line 23, in <module>
+    import faiss
+ModuleNotFoundError: No module named 'faiss'
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ pip install faiss==1.7.4
+ERROR: Could not find a version that satisfies the requirement faiss==1.7.4 (from versions: none)
+ERROR: No matching distribution found for faiss==1.7.4
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ pip install faiss
+ERROR: Could not find a version that satisfies the requirement faiss (from versions: none)
+ERROR: No matching distribution found for faiss
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ pip install faiss-cpu==1.7.4
+ERROR: Could not find a version that satisfies the requirement faiss-cpu==1.7.4 (from versions: 1.9.0.post1, 1.10.0, 1.11.0, 1.11.0.post1, 1.12.0, 1.13.0, 1.13.1, 1.13.2, 1.14.2, 1.14.3, 1.15.0)
+ERROR: No matching distribution found for faiss-cpu==1.7.4
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ pip install faiss-cpu
+Collecting faiss-cpu
+  Downloading faiss_cpu-1.15.0-cp313-cp313-win_amd64.whl.metadata (7.8 kB)
+Requirement already satisfied: numpy>=1.25 in c:\users\lenovo\anaconda3\lib\site-packages (from faiss-cpu) (2.3.5)
+Requirement already satisfied: packaging in c:\users\lenovo\anaconda3\lib\site-packages (from faiss-cpu) (25.0)
+Downloading faiss_cpu-1.15.0-cp313-cp313-win_amd64.whl (16.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.3/16.3 MB 7.3 MB/s  0:00:02
+Installing collected packages: faiss-cpu
+Successfully installed faiss-cpu-1.15.0
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash index.sh
+(120, 768)
+hnsw_add_vertices: adding 120 elements on top of 0 (preset_levels=0)
+  max_level = 0
+Adding 120 elements at level 0
+Done in 5.554 ms
+120
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash index.sh
+(120, 768)
+hnsw_add_vertices: adding 120 elements on top of 0 (preset_levels=0)
+  max_level = 0
+Adding 120 elements at level 0
+Done in 5.330 ms
+120
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash index.sh
+  0%|                                                                                                                                            | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\index\faiss.py", line 56, in <module>
+    info = json.loads(line)
+  File "C:\Users\LENOVO\anaconda3\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash index.sh
+  0%|                                                                                                                                            | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\index\faiss.py", line 56, in <module>
+    info = json.loads(line)
+  File "C:\Users\LENOVO\anaconda3\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash index.sh
+0it [00:00, ?it/s]
+(0,)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\index\faiss.py", line 80, in <module>
+    index.add(vectors)
+    ~~~~~~~~~^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\faiss\class_wrappers.py", line 303, in replacement_add
+    n, d = x.shape
+    ^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash index.sh
+  0%|                                                                                                                                            | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\index\faiss.py", line 56, in <module>
+    info = json.loads(line)
+  File "C:\Users\LENOVO\anaconda3\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python -c "for i in range(1, 245): print(f'{{\"id\": \"P{i:03d}\"}}')" > docids
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash index.sh
+  0%|                                                                                                                                            | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\index\faiss.py", line 58, in <module>
+    vector = info['vector']
+             ~~~~^^^^^^^^^^
+KeyError: 'vector'
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ pip install pyserini==0.17.0
+Collecting pyserini==0.17.0
+  Downloading pyserini-0.17.0-py3-none-any.whl.metadata (4.5 kB)
+Requirement already satisfied: Cython>=0.29.21 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (3.2.9)
+Requirement already satisfied: numpy>=1.18.1 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (2.3.5)
+Requirement already satisfied: pandas>=1.1.5 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (2.3.3)
+Requirement already satisfied: pyjnius>=1.4.0 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (1.7.0)
+Requirement already satisfied: scikit-learn>=0.22.1 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (1.7.2)
+Requirement already satisfied: scipy>=1.4.1 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (1.16.3)
+Requirement already satisfied: tqdm in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (4.67.1)
+Requirement already satisfied: transformers>=4.6.0 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (5.15.1)
+Requirement already satisfied: sentencepiece>=0.1.95 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (0.2.2)
+Requirement already satisfied: nmslib>=2.1.1 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (2.1.2)
+Requirement already satisfied: onnxruntime>=1.8.1 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (1.29.0)
+Requirement already satisfied: lightgbm>=3.3.2 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (4.7.0)
+Requirement already satisfied: spacy>=3.2.1 in c:\users\lenovo\anaconda3\lib\site-packages (from pyserini==0.17.0) (3.8.15)
+Requirement already satisfied: narwhals>=1.15 in c:\users\lenovo\anaconda3\lib\site-packages (from lightgbm>=3.3.2->pyserini==0.17.0) (2.7.0)
+Requirement already satisfied: pybind11>=2.2.3 in c:\users\lenovo\anaconda3\lib\site-packages (from nmslib>=2.1.1->pyserini==0.17.0) (3.1.0)
+Requirement already satisfied: flatbuffers in c:\users\lenovo\anaconda3\lib\site-packages (from onnxruntime>=1.8.1->pyserini==0.17.0) (25.12.19)
+Requirement already satisfied: packaging in c:\users\lenovo\anaconda3\lib\site-packages (from onnxruntime>=1.8.1->pyserini==0.17.0) (25.0)
+Requirement already satisfied: protobuf>=4.25.8 in c:\users\lenovo\anaconda3\lib\site-packages (from onnxruntime>=1.8.1->pyserini==0.17.0) (7.35.1)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\lenovo\anaconda3\lib\site-packages (from pandas>=1.1.5->pyserini==0.17.0) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in c:\users\lenovo\anaconda3\lib\site-packages (from pandas>=1.1.5->pyserini==0.17.0) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\lenovo\anaconda3\lib\site-packages (from pandas>=1.1.5->pyserini==0.17.0) (2025.2)
+Requirement already satisfied: six>=1.5 in c:\users\lenovo\anaconda3\lib\site-packages (from python-dateutil>=2.8.2->pandas>=1.1.5->pyserini==0.17.0) (1.17.0)
+Requirement already satisfied: joblib>=1.2.0 in c:\users\lenovo\anaconda3\lib\site-packages (from scikit-learn>=0.22.1->pyserini==0.17.0) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in c:\users\lenovo\anaconda3\lib\site-packages (from scikit-learn>=0.22.1->pyserini==0.17.0) (3.5.0)
+Requirement already satisfied: spacy-legacy<3.1.0,>=3.0.11 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (3.0.12)
+Requirement already satisfied: spacy-loggers<2.0.0,>=1.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (1.0.5)
+Requirement already satisfied: murmurhash<1.1.0,>=0.28.0 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (1.0.15)
+Requirement already satisfied: cymem<2.1.0,>=2.0.2 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (2.0.13)
+Requirement already satisfied: preshed<3.1.0,>=3.0.2 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (3.0.13)
+Requirement already satisfied: thinc<8.4.0,>=8.3.12 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (8.3.13)
+Requirement already satisfied: wasabi<1.2.0,>=0.9.1 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (1.1.3)
+Requirement already satisfied: srsly<3.0.0,>=2.5.3 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (2.5.3)
+Requirement already satisfied: catalogue<2.1.0,>=2.0.6 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (2.0.10)
+Requirement already satisfied: weasel<2.0.0,>=1.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (1.0.0)
+Requirement already satisfied: confection<2.0.0,>=1.3.2 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (1.3.3)
+Requirement already satisfied: typer<1.0.0,>=0.3.0 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (0.20.0)
+Requirement already satisfied: click<9.0.0,>=8.2.1 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (8.4.2)
+Requirement already satisfied: requests<3.0.0,>=2.13.0 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (2.32.5)
+Requirement already satisfied: pydantic<3.0.0,>=2.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (2.12.4)
+Requirement already satisfied: jinja2 in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (3.1.6)
+Requirement already satisfied: setuptools in c:\users\lenovo\anaconda3\lib\site-packages (from spacy>=3.2.1->pyserini==0.17.0) (80.9.0)
+Requirement already satisfied: colorama in c:\users\lenovo\anaconda3\lib\site-packages (from click<9.0.0,>=8.2.1->spacy>=3.2.1->pyserini==0.17.0) (0.4.6)
+Requirement already satisfied: annotated-types>=0.6.0 in c:\users\lenovo\anaconda3\lib\site-packages (from pydantic<3.0.0,>=2.0.0->spacy>=3.2.1->pyserini==0.17.0) (0.6.0)
+Requirement already satisfied: pydantic-core==2.41.5 in c:\users\lenovo\anaconda3\lib\site-packages (from pydantic<3.0.0,>=2.0.0->spacy>=3.2.1->pyserini==0.17.0) (2.41.5)
+Requirement already satisfied: typing-extensions>=4.14.1 in c:\users\lenovo\anaconda3\lib\site-packages (from pydantic<3.0.0,>=2.0.0->spacy>=3.2.1->pyserini==0.17.0) (4.15.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in c:\users\lenovo\anaconda3\lib\site-packages (from pydantic<3.0.0,>=2.0.0->spacy>=3.2.1->pyserini==0.17.0) (0.4.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\lenovo\anaconda3\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy>=3.2.1->pyserini==0.17.0) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\lenovo\anaconda3\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy>=3.2.1->pyserini==0.17.0) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\lenovo\anaconda3\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy>=3.2.1->pyserini==0.17.0) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\lenovo\anaconda3\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy>=3.2.1->pyserini==0.17.0) (2026.1.4)
+Requirement already satisfied: blis<1.4.0,>=1.3.0 in c:\users\lenovo\anaconda3\lib\site-packages (from thinc<8.4.0,>=8.3.12->spacy>=3.2.1->pyserini==0.17.0) (1.3.3)
+Requirement already satisfied: shellingham>=1.3.0 in c:\users\lenovo\anaconda3\lib\site-packages (from typer<1.0.0,>=0.3.0->spacy>=3.2.1->pyserini==0.17.0) (1.5.4)
+Requirement already satisfied: rich>=10.11.0 in c:\users\lenovo\anaconda3\lib\site-packages (from typer<1.0.0,>=0.3.0->spacy>=3.2.1->pyserini==0.17.0) (14.2.0)
+Requirement already satisfied: cloudpathlib>=0.7.0 in c:\users\lenovo\anaconda3\lib\site-packages (from weasel<2.0.0,>=1.0.0->spacy>=3.2.1->pyserini==0.17.0) (0.24.0)
+Requirement already satisfied: smart-open>=5.2.1 in c:\users\lenovo\anaconda3\lib\site-packages (from weasel<2.0.0,>=1.0.0->spacy>=3.2.1->pyserini==0.17.0) (8.0.1)
+Requirement already satisfied: httpx>=0.24.0 in c:\users\lenovo\anaconda3\lib\site-packages (from weasel<2.0.0,>=1.0.0->spacy>=3.2.1->pyserini==0.17.0) (0.28.1)
+Requirement already satisfied: anyio in c:\users\lenovo\anaconda3\lib\site-packages (from httpx>=0.24.0->weasel<2.0.0,>=1.0.0->spacy>=3.2.1->pyserini==0.17.0) (4.10.0)
+Requirement already satisfied: httpcore==1.* in c:\users\lenovo\anaconda3\lib\site-packages (from httpx>=0.24.0->weasel<2.0.0,>=1.0.0->spacy>=3.2.1->pyserini==0.17.0) (
+1.0.9)
+Requirement already satisfied: h11>=0.16 in c:\users\lenovo\anaconda3\lib\site-packages (from httpcore==1.*->httpx>=0.24.0->weasel<2.0.0,>=1.0.0->spacy>=3.2.1->pyserini==0.17.0) (0.16.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in c:\users\lenovo\anaconda3\lib\site-packages (from rich>=10.11.0->typer<1.0.0,>=0.3.0->spacy>=3.2.1->pyserini==0.17.0) (2.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in c:\users\lenovo\anaconda3\lib\site-packages (from rich>=10.11.0->typer<1.0.0,>=0.3.0->spacy>=3.2.1->pyserini==0.17.0) (2.19.2)
+Requirement already satisfied: mdurl~=0.1 in c:\users\lenovo\anaconda3\lib\site-packages (from markdown-it-py>=2.2.0->rich>=10.11.0->typer<1.0.0,>=0.3.0->spacy>=3.2.1->pyserini==0.17.0) (0.1.2)
+Requirement already satisfied: wrapt in c:\users\lenovo\anaconda3\lib\site-packages (from smart-open>=5.2.1->weasel<2.0.0,>=1.0.0->spacy>=3.2.1->pyserini==0.17.0) (1.17.0)
+Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in c:\users\lenovo\anaconda3\lib\site-packages (from transformers>=4.6.0->pyserini==0.17.0) (1.28.0)
+Requirement already satisfied: pyyaml>=5.1 in c:\users\lenovo\anaconda3\lib\site-packages (from transformers>=4.6.0->pyserini==0.17.0) (6.0.3)
+Requirement already satisfied: regex>=2025.10.22 in c:\users\lenovo\anaconda3\lib\site-packages (from transformers>=4.6.0->pyserini==0.17.0) (2026.7.19)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in c:\users\lenovo\anaconda3\lib\site-packages (from transformers>=4.6.0->pyserini==0.17.0) (0.22.2)
+Requirement already satisfied: safetensors>=0.8.0 in c:\users\lenovo\anaconda3\lib\site-packages (from transformers>=4.6.0->pyserini==0.17.0) (0.8.0)
+Requirement already satisfied: filelock>=3.10.0 in c:\users\lenovo\anaconda3\lib\site-packages (from huggingface-hub<2.0,>=1.5.0->transformers>=4.6.0->pyserini==0.17.0) (3.20.0)
+Requirement already satisfied: fsspec>=2023.5.0 in c:\users\lenovo\anaconda3\lib\site-packages (from huggingface-hub<2.0,>=1.5.0->transformers>=4.6.0->pyserini==0.17.0) (2025.10.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.2 in c:\users\lenovo\anaconda3\lib\site-packages (from huggingface-hub<2.0,>=1.5.0->transformers>=4.6.0->pyserini==0.17.0) (1.6.0)
+Requirement already satisfied: sniffio>=1.1 in c:\users\lenovo\anaconda3\lib\site-packages (from anyio->httpx>=0.24.0->weasel<2.0.0,>=1.0.0->spacy>=3.2.1->pyserini==0.17.0) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\lenovo\anaconda3\lib\site-packages (from jinja2->spacy>=3.2.1->pyserini==0.17.0) (3.0.2)
+Downloading pyserini-0.17.0-py3-none-any.whl (109.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.5/109.5 MB 5.8 MB/s  0:00:19
+Installing collected packages: pyserini
+  Attempting uninstall: pyserini
+    Found existing installation: pyserini 0.22.0
+    Uninstalling pyserini-0.22.0:
+      Successfully uninstalled pyserini-0.22.0
+Successfully installed pyserini-0.17.0
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash index.sh
+  0%|                                                                                                                                            | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\index\faiss.py", line 58, in <module>
+    vector = info['vector']
+             ~~~~^^^^^^^^^^
+KeyError: 'vector'
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash index.sh
+  0%|                                                                                                                                            | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\index\faiss.py", line 58, in <module>
+    vector = info['vector']
+             ~~~~^^^^^^^^^^
+KeyError: 'vector'
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash encode.sh
+Traceback (most recent call last):
+  File "<frozen runpy>", line 189, in _run_module_as_main
+  File "<frozen runpy>", line 148, in _get_module_details
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\encode\__init__.py", line 17, in <module>
+    from ._base import DocumentEncoder, QueryEncoder, JsonlCollectionIterator,\
+        RepresentationWriter, FaissRepresentationWriter, JsonlRepresentationWriter, PcaEncoder
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\encode\_base.py", line 20, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ pip install torch==2.1.0
+ERROR: Could not find a version that satisfies the requirement torch==2.1.0 (from versions: 2.6.0, 2.7.0, 2.7.1, 2.8.0, 2.9.0, 2.9.1, 2.10.0, 2.11.0, 2.12.0, 2.12.1, 2.13.0)
+ERROR: No matching distribution found for torch==2.1.0
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ pip install torch
+Collecting torch
+  Downloading torch-2.13.0-cp313-cp313-win_amd64.whl.metadata (39 kB)
+Requirement already satisfied: filelock in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (3.20.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (4.15.0)
+Requirement already satisfied: setuptools>=77.0.3 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (80.9.0)
+Requirement already satisfied: sympy>=1.13.3 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (3.5)
+Requirement already satisfied: jinja2 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (2025.10.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in c:\users\lenovo\anaconda3\lib\site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\lenovo\anaconda3\lib\site-packages (from jinja2->torch) (3.0.2)
+Downloading torch-2.13.0-cp313-cp313-win_amd64.whl (122.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.1/122.1 MB 10.5 MB/s  0:00:11
+Installing collected packages: torch
+Successfully installed torch-2.13.0
+
+
+
+
+
+
+
+
+
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ pip install torch
+Requirement already satisfied: torch in c:\users\lenovo\anaconda3\lib\site-packages (2.13.0)
+Requirement already satisfied: filelock in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (3.20.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (4.15.0)
+Requirement already satisfied: setuptools>=77.0.3 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (80.9.0)
+Requirement already satisfied: sympy>=1.13.3 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (3.5)
+Requirement already satisfied: jinja2 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in c:\users\lenovo\anaconda3\lib\site-packages (from torch) (2025.10.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in c:\users\lenovo\anaconda3\lib\site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\lenovo\anaconda3\lib\site-packages (from jinja2->torch) (3.0.2)
+
+
+
+
+
+
+
+
+
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$
+
+
+
+
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$
+
+
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash encode.sh
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\encode\__main__.py", line 89, in <module>
+    encoder = init_encoder(args.encoder.encoder, device=args.encoder.device)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\encode\__main__.py", line 29, in init_encoder
+    return TctColBertDocumentEncoder(encoder, device=device)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\encode\_tct_colbert.py", line 37, in __init__
+    self.model = BertModel.from_pretrained(model_name)
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\modeling_utils.py", line 4195, in from_pretrained
+    config, model_kwargs = config_class.from_pretrained(
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        config_path,
+        ^^^^^^^^^^^^
+    ...<5 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\configuration_utils.py", line 704, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\configuration_utils.py", line 745, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\configuration_utils.py", line 800, in _get_config_dict
+    resolved_config_file = cached_file(
+        pretrained_model_name_or_path,
+    ...<9 lines>...
+        _commit_hash=commit_hash,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\utils\hub.py", line 294, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\utils\hub.py", line 535, in cached_files
+    raise e
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\utils\hub.py", line 438, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        tqdm_class=tqdm_class,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1019, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+        # Destination
+    ...<15 lines>...
+        dry_run=dry_run,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1089, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        repo_id=repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        tree_cache_folder=storage_folder,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1714, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+        url=url,
+    ...<4 lines>...
+        retry_on_errors=retry_on_errors,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1621, in get_hf_file_metadata
+    response = _httpx_follow_relative_redirects_with_backoff(
+        method="HEAD", url=url, headers=hf_headers, timeout=timeout, retry_on_errors=retry_on_errors
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 722, in _httpx_follow_relative_redirects_with_backoff
+    response = http_backoff(
+        method=method,
+    ...<3 lines>...
+        **no_retry_kwargs,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 599, in http_backoff
+    return next(
+        _http_backoff_base(
+    ...<9 lines>...
+        )
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 466, in _http_backoff_base
+    client = get_session()
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 379, in get_session
+    _GLOBAL_CLIENT = _GLOBAL_CLIENT_FACTORY()
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 308, in default_client_factory
+    return httpx.Client(
+           ~~~~~~~~~~~~^
+        event_hooks={"request": [hf_request_event_hook]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_redirects=True,
+        ^^^^^^^^^^^^^^^^^^^^^^
+        timeout=None,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_client.py", line 688, in __init__
+    self._transport = self._init_transport(
+                      ~~~~~~~~~~~~~~~~~~~~^
+        verify=verify,
+        ^^^^^^^^^^^^^^
+    ...<5 lines>...
+        transport=transport,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_client.py", line 731, in _init_transport
+    return HTTPTransport(
+        verify=verify,
+    ...<4 lines>...
+        limits=limits,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_transports\default.py", line 153, in __init__
+    ssl_context = create_ssl_context(verify=verify, cert=cert, trust_env=trust_env)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_config.py", line 35, in create_ssl_context
+    ctx = ssl.create_default_context(cafile=os.environ["SSL_CERT_FILE"])
+  File "C:\Users\LENOVO\anaconda3\Lib\ssl.py", line 717, in create_default_context
+    context.load_verify_locations(cafile, capath, cadata)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash encode.sh
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 559/559 [00:00<00:00, 1.53MB/s]
+C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py:141: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\LENOVO\.cache\huggingface\hub\models--castorini--tct_colbert-v2-hnp-msmarco. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+pytorch_model.bin: downloading bytes: █████████████████████████████████████████████████████████████████████████████████████████████████████████████|  413MB, 5.36MB/s
+pytorch_model.bin: reconstructing file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████|  438MB /  438MB, 25.3MB/s
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [00:00<00:00, 9885.08it/s]
+tokenizer_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 334/334 [00:00<00:00, 753kB/s]
+vocab.txt: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 1.81MB/s]
+special_tokens_map.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 112/112 [00:00<00:00, 229kB/s]
+244it [00:00, 64519.62it/s]                                                                                                                 | 0.00/232k [00:00<?, ?B/s]
+model.safetensors: downloading bytes: █████████████████████████████████████████████████████████████████████████████████████████████████████████████|  413MB, 8.25MB/s
+model.safetensors: reconstructing file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████|  438MB /  438MB, 28.6MB/s
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [04:17<00:00, 32.15s/it]
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main):17<00:00, 27.27s/it]
+$ bash index.sh
+(244, 768)
+hnsw_add_vertices: adding 244 elements on top of 0 (preset_levels=0)
+  max_level = 0
+Adding 244 elements at level 0
+Done in 21.327 ms
+244
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python search.py
+Traceback (most recent call last):
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\search.py", line 31, in <module>
+    searcher = FaissSearcher(
+        INDEX,
+        QUERY_ENCODER
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\search\faiss\_searcher.py", line 355, in __init__
+    self.query_encoder = self._init_encoder_from_str(query_encoder)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\search\faiss\_searcher.py", line 509, in _init_encoder_from_str
+    return DprQueryEncoder(encoder_dir=encoder)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\search\faiss\_searcher.py", line 127, in __init__
+    self.model = DPRQuestionEncoder.from_pretrained(encoder_dir)
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\modeling_utils.py", line 4195, in from_pretrained
+    config, model_kwargs = config_class.from_pretrained(
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        config_path,
+        ^^^^^^^^^^^^
+    ...<5 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\configuration_utils.py", line 704, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\configuration_utils.py", line 745, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\configuration_utils.py", line 800, in _get_config_dict
+    resolved_config_file = cached_file(
+        pretrained_model_name_or_path,
+    ...<9 lines>...
+        _commit_hash=commit_hash,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\utils\hub.py", line 294, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\utils\hub.py", line 535, in cached_files
+    raise e
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\utils\hub.py", line 438, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        tqdm_class=tqdm_class,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1019, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+        # Destination
+    ...<15 lines>...
+        dry_run=dry_run,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1089, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        repo_id=repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        tree_cache_folder=storage_folder,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1714, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+        url=url,
+    ...<4 lines>...
+        retry_on_errors=retry_on_errors,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1621, in get_hf_file_metadata
+    response = _httpx_follow_relative_redirects_with_backoff(
+        method="HEAD", url=url, headers=hf_headers, timeout=timeout, retry_on_errors=retry_on_errors
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 722, in _httpx_follow_relative_redirects_with_backoff
+    response = http_backoff(
+        method=method,
+    ...<3 lines>...
+        **no_retry_kwargs,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 599, in http_backoff
+    return next(
+        _http_backoff_base(
+    ...<9 lines>...
+        )
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 466, in _http_backoff_base
+    client = get_session()
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 379, in get_session
+    _GLOBAL_CLIENT = _GLOBAL_CLIENT_FACTORY()
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 308, in default_client_factory
+    return httpx.Client(
+           ~~~~~~~~~~~~^
+        event_hooks={"request": [hf_request_event_hook]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_redirects=True,
+        ^^^^^^^^^^^^^^^^^^^^^^
+        timeout=None,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_client.py", line 688, in __init__
+    self._transport = self._init_transport(
+                      ~~~~~~~~~~~~~~~~~~~~^
+        verify=verify,
+        ^^^^^^^^^^^^^^
+    ...<5 lines>...
+        transport=transport,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_client.py", line 731, in _init_transport
+    return HTTPTransport(
+        verify=verify,
+    ...<4 lines>...
+        limits=limits,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_transports\default.py", line 153, in __init__
+    ssl_context = create_ssl_context(verify=verify, cert=cert, trust_env=trust_env)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_config.py", line 35, in create_ssl_context
+    ctx = ssl.create_default_context(cafile=os.environ["SSL_CERT_FILE"])
+  File "C:\Users\LENOVO\anaconda3\Lib\ssl.py", line 717, in create_default_context
+    context.load_verify_locations(cafile, capath, cadata)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+ayaysasyauayaysasyauayaysasyau(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py
+Traceback (most recent call last):
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\eval.py", line 1, in <module>
+    from ranx import compare,Qrels,Run
+ModuleNotFoundError: No module named 'ranx'
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ pip install ranx==0.3.18
+Collecting ranx==0.3.18
+  Downloading ranx-0.3.18-py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: numpy in c:\users\lenovo\anaconda3\lib\site-packages (from ranx==0.3.18) (2.3.5)
+Requirement already satisfied: numba>=0.54.1 in c:\users\lenovo\anaconda3\lib\site-packages (from ranx==0.3.18) (0.62.1)
+Requirement already satisfied: pandas in c:\users\lenovo\anaconda3\lib\site-packages (from ranx==0.3.18) (2.3.3)
+Requirement already satisfied: tabulate in c:\users\lenovo\anaconda3\lib\site-packages (from ranx==0.3.18) (0.9.0)
+Requirement already satisfied: tqdm in c:\users\lenovo\anaconda3\lib\site-packages (from ranx==0.3.18) (4.67.1)
+Requirement already satisfied: scipy>=1.8.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ranx==0.3.18) (1.16.3)
+Collecting ir-datasets (from ranx==0.3.18)
+  Downloading ir_datasets-0.6.3-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: rich in c:\users\lenovo\anaconda3\lib\site-packages (from ranx==0.3.18) (14.2.0)
+Collecting orjson (from ranx==0.3.18)
+  Downloading orjson-3.12.0-cp313-cp313-win_amd64.whl.metadata (43 kB)
+Requirement already satisfied: lz4 in c:\users\lenovo\anaconda3\lib\site-packages (from ranx==0.3.18) (4.4.5)
+Collecting cbor2 (from ranx==0.3.18)
+  Downloading cbor2-6.1.4-cp313-cp313-win_amd64.whl.metadata (5.7 kB)
+Requirement already satisfied: seaborn in c:\users\lenovo\anaconda3\lib\site-packages (from ranx==0.3.18) (0.13.2)
+Collecting fastparquet (from ranx==0.3.18)
+  Downloading fastparquet-2026.5.0-cp313-cp313-win_amd64.whl.metadata (4.9 kB)
+Requirement already satisfied: llvmlite<0.46,>=0.45.0dev0 in c:\users\lenovo\anaconda3\lib\site-packages (from numba>=0.54.1->ranx==0.3.18) (0.45.1)
+Collecting cramjam>=2.3 (from fastparquet->ranx==0.3.18)
+  Downloading cramjam-2.11.0-cp313-cp313-win_amd64.whl.metadata (681 bytes)
+Requirement already satisfied: fsspec in c:\users\lenovo\anaconda3\lib\site-packages (from fastparquet->ranx==0.3.18) (2025.10.0)
+Requirement already satisfied: packaging in c:\users\lenovo\anaconda3\lib\site-packages (from fastparquet->ranx==0.3.18) (25.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\lenovo\anaconda3\lib\site-packages (from pandas->ranx==0.3.18) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in c:\users\lenovo\anaconda3\lib\site-packages (from pandas->ranx==0.3.18) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\lenovo\anaconda3\lib\site-packages (from pandas->ranx==0.3.18) (2025.2)
+Requirement already satisfied: six>=1.5 in c:\users\lenovo\anaconda3\lib\site-packages (from python-dateutil>=2.8.2->pandas->ranx==0.3.18) (1.17.0)
+Requirement already satisfied: lxml>=4.5.2 in c:\users\lenovo\anaconda3\lib\site-packages (from ir-datasets->ranx==0.3.18) (5.3.0)
+Requirement already satisfied: pyyaml>=5.3.1 in c:\users\lenovo\anaconda3\lib\site-packages (from ir-datasets->ranx==0.3.18) (6.0.3)
+Requirement already satisfied: requests>=2.22.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ir-datasets->ranx==0.3.18) (2.32.5)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\lenovo\anaconda3\lib\site-packages (from requests>=2.22.0->ir-datasets->ranx==0.3.18) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\lenovo\anaconda3\lib\site-packages (from requests>=2.22.0->ir-datasets->ranx==0.3.18) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\lenovo\anaconda3\lib\site-packages (from requests>=2.22.0->ir-datasets->ranx==0.3.18) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\lenovo\anaconda3\lib\site-packages (from requests>=2.22.0->ir-datasets->ranx==0.3.18) (2026.1.4)
+Requirement already satisfied: colorama in c:\users\lenovo\anaconda3\lib\site-packages (from tqdm->ranx==0.3.18) (0.4.6)
+Requirement already satisfied: markdown-it-py>=2.2.0 in c:\users\lenovo\anaconda3\lib\site-packages (from rich->ranx==0.3.18) (2.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in c:\users\lenovo\anaconda3\lib\site-packages (from rich->ranx==0.3.18) (2.19.2)
+Requirement already satisfied: mdurl~=0.1 in c:\users\lenovo\anaconda3\lib\site-packages (from markdown-it-py>=2.2.0->rich->ranx==0.3.18) (0.1.2)
+Requirement already satisfied: matplotlib!=3.6.1,>=3.4 in c:\users\lenovo\anaconda3\lib\site-packages (from seaborn->ranx==0.3.18) (3.10.6)
+Requirement already satisfied: contourpy>=1.0.1 in c:\users\lenovo\anaconda3\lib\site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ranx==0.3.18) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in c:\users\lenovo\anaconda3\lib\site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ranx==0.3.18) (0.11.0)
+Requirement already satisfied: fonttools>=4.22.0 in c:\users\lenovo\anaconda3\lib\site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ranx==0.3.18) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in c:\users\lenovo\anaconda3\lib\site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ranx==0.3.18) (1.4.9)
+Requirement already satisfied: pillow>=8 in c:\users\lenovo\anaconda3\lib\site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ranx==0.3.18) (12.0.0)
+Requirement already satisfied: pyparsing>=2.3.1 in c:\users\lenovo\anaconda3\lib\site-packages (from matplotlib!=3.6.1,>=3.4->seaborn->ranx==0.3.18) (3.2.5)
+Downloading ranx-0.3.18-py3-none-any.whl (99 kB)
+Downloading cbor2-6.1.4-cp313-cp313-win_amd64.whl (299 kB)
+Downloading fastparquet-2026.5.0-cp313-cp313-win_amd64.whl (695 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 695.2/695.2 kB 5.3 MB/s  0:00:00
+Downloading cramjam-2.11.0-cp313-cp313-win_amd64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 10.2 MB/s  0:00:00
+Downloading ir_datasets-0.6.3-py3-none-any.whl (947 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 947.8/947.8 kB 11.0 MB/s  0:00:00
+Downloading orjson-3.12.0-cp313-cp313-win_amd64.whl (121 kB)
+Installing collected packages: orjson, cramjam, cbor2, ir-datasets, fastparquet, ranx
+Successfully installed cbor2-6.1.4 cramjam-2.11.0 fastparquet-2026.5.0 ir-datasets-0.6.3 orjson-3.12.0 ranx-0.3.18
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py
+usage: eval.py [-h] {known,inferred} qrel runs [runs ...]
+eval.py: error: the following arguments are required: topic_set, qrel, runs
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python search.py
+file reas=d succwessfullu
+Traceback (most recent call last):
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\search.py", line 31, in <module>
+    searcher = FaissSearcher(
+        INDEX,
+        QUERY_ENCODER
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\search\faiss\_searcher.py", line 355, in __init__
+    self.query_encoder = self._init_encoder_from_str(query_encoder)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\search\faiss\_searcher.py", line 509, in _init_encoder_from_str
+    return DprQueryEncoder(encoder_dir=encoder)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\search\faiss\_searcher.py", line 127, in __init__
+    self.model = DPRQuestionEncoder.from_pretrained(encoder_dir)
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\modeling_utils.py", line 4195, in from_pretrained
+    config, model_kwargs = config_class.from_pretrained(
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        config_path,
+        ^^^^^^^^^^^^
+    ...<5 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\configuration_utils.py", line 704, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\configuration_utils.py", line 745, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\configuration_utils.py", line 800, in _get_config_dict
+    resolved_config_file = cached_file(
+        pretrained_model_name_or_path,
+    ...<9 lines>...
+        _commit_hash=commit_hash,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\utils\hub.py", line 294, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\utils\hub.py", line 535, in cached_files
+    raise e
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\transformers\utils\hub.py", line 438, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        tqdm_class=tqdm_class,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1019, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+        # Destination
+    ...<15 lines>...
+        dry_run=dry_run,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1089, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        repo_id=repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        tree_cache_folder=storage_folder,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1714, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+        url=url,
+    ...<4 lines>...
+        retry_on_errors=retry_on_errors,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py", line 1621, in get_hf_file_metadata
+    response = _httpx_follow_relative_redirects_with_backoff(
+        method="HEAD", url=url, headers=hf_headers, timeout=timeout, retry_on_errors=retry_on_errors
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 722, in _httpx_follow_relative_redirects_with_backoff
+    response = http_backoff(
+        method=method,
+    ...<3 lines>...
+        **no_retry_kwargs,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 599, in http_backoff
+    return next(
+        _http_backoff_base(
+    ...<9 lines>...
+        )
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 466, in _http_backoff_base
+    client = get_session()
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 379, in get_session
+    _GLOBAL_CLIENT = _GLOBAL_CLIENT_FACTORY()
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\utils\_http.py", line 308, in default_client_factory
+    return httpx.Client(
+           ~~~~~~~~~~~~^
+        event_hooks={"request": [hf_request_event_hook]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_redirects=True,
+        ^^^^^^^^^^^^^^^^^^^^^^
+        timeout=None,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_client.py", line 688, in __init__
+    self._transport = self._init_transport(
+                      ~~~~~~~~~~~~~~~~~~~~^
+        verify=verify,
+        ^^^^^^^^^^^^^^
+    ...<5 lines>...
+        transport=transport,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_client.py", line 731, in _init_transport
+    return HTTPTransport(
+        verify=verify,
+    ...<4 lines>...
+        limits=limits,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_transports\default.py", line 153, in __init__
+    ssl_context = create_ssl_context(verify=verify, cert=cert, trust_env=trust_env)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\httpx\_config.py", line 35, in create_ssl_context
+    ctx = ssl.create_default_context(cafile=os.environ["SSL_CERT_FILE"])
+  File "C:\Users\LENOVO\anaconda3\Lib\ssl.py", line 717, in create_default_context
+    context.load_verify_locations(cafile, capath, cadata)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ unset SSL_CERT_FILE
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python search.py
+Traceback (most recent call last):
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\search.py", line 10, in <module>
+    os.environ.pop('SSL_CERT_FILE', None)
+    ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python search.py
+rEADING FILE NOW
+file reas=d succwessfullu
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 493/493 [00:00<00:00, 962kB/s]
+C:\Users\LENOVO\anaconda3\Lib\site-packages\huggingface_hub\file_download.py:141: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\LENOVO\.cache\huggingface\hub\models--facebook--dpr-question_encoder-multiset-base. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+pytorch_model.bin: downloading bytes: █████████████████████████████████████████████████████████████████████████████████████████████████████████████|  413MB, 3.00MB/s
+pytorch_model.bin: reconstructing file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████|  438MB /  438MB, 16.6MB/s
+Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 197/197 [00:00<00:00, 10080.37it/s]
+[transformers] DPRQuestionEncoder LOAD REPORT from: facebook/dpr-question_encoder-multiset-base
+Key                                             | Status     |  |
+------------------------------------------------+------------+--+-
+question_encoder.bert_model.pooler.dense.bias   | UNEXPECTED |  |
+question_encoder.bert_model.pooler.dense.weight | UNEXPECTED |  |
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+tokenizer_config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 28.0/28.0 [00:00<00:00, 81.6kB/s]
+vocab.txt: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 8.22MB/s]
+tokenizer.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 466k/466k [00:00<00:00, 13.5MB/s]
+Traceback (most recent call last):                                                                                                          | 0.00/232k [00:00<?, ?B/s]
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\search.py", line 43, in <module>, ?B/s]
+    searcher = LuceneSearcher(INDEX_BM25)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\search\lucene\_searcher.py", line 51, in __init__
+    self.object = JLuceneSearcher(index_dir)
+                  ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "jnius/jnius_export_class.pxi", line 285, in jnius.JavaClass.__init__
+  File "jnius/jnius_export_class.pxi", line 403, in jnius.JavaClass.call_constructor
+  File "jnius/jnius_utils.pxi", line 79, in jnius.check_exception
+jnius.JavaException: JVM exception occurred: java.lang.IllegalArgumentException: indexCreatedVersionMajor is in the future: 9
+java.lang.IllegalArgumentException: indexCreatedVersionMajor is in the future: 9
+        org.apache.lucene.index.SegmentInfos.<init>(SegmentInfos.java:169)
+        org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:327)
+        org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:291)
+        org.apache.lucene.index.StandardDirectoryReader$1.doBody(StandardDirectoryReader.java:64)
+        org.apache.lucene.index.StandardDirectoryReader$1.doBody(StandardDirectoryReader.java:61)
+        org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:720)
+        org.apache.lucene.index.StandardDirectoryReader.open(StandardDirectoryReader.java:84)
+        org.apache.lucene.index.DirectoryReader.open(DirectoryReader.java:64)
+        io.anserini.search.SimpleSearcher.<init>(SimpleSearcher.java:212)
+        io.anserini.search.SimpleSearcher.<init>(SimpleSearcher.java:193)
+model.safetensors: downloading bytes: █████████████████████████████████████████████████████████████████████████████████████████████████████████████|  413MB, 5.84MB/s
+model.safetensors: reconstructing file: 100%|█████████████████████████████████████████████████████████████████████████████████████████████|  438MB /  438MB, 28.3MB/s
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python search.py
+rEADING FILE NOW
+file reas=d succwessfullu
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [00:00<00:00, 6870.42it/s]
+Done! Results written to ../../target/runs/rag-dense-faiss.txt
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py  inferred ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+Traceback (most recent call last):
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\eval.py", line 57, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\eval.py", line 35, in main
+    qrels = Qrels.from_df(qrels_inferred,
+                          q_id_col="q_id",
+                          score_col="score")
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\ranx\data_structures\qrels.py", line 310, in from_df
+    return Qrels.from_dict(qrels_dict)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\ranx\data_structures\qrels.py", line 236, in from_dict
+    max_len = max(len(y) for x in doc_ids for y in x)
+ValueError: max() iterable argument is empty
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py  known ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+Traceback (most recent call last):
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\eval.py", line 57, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\eval.py", line 30, in main
+    qrels = Qrels.from_df(qrels_known,
+                          q_id_col="q_id",
+                          doc_id_col="doc_id",
+                          score_col="score")
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\ranx\data_structures\qrels.py", line 310, in from_df
+    return Qrels.from_dict(qrels_dict)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\ranx\data_structures\qrels.py", line 236, in from_dict
+    max_len = max(len(y) for x in doc_ids for y in x)
+ValueError: max() iterable argument is empty
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py  known ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+Traceback (most recent call last):
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\eval.py", line 66, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\eval.py", line 49, in main
+    report = compare(
+        qrels=qrels,
+    ...<5 lines>...
+        rounding_digits=4,
+    )
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\ranx\meta\compare.py", line 80, in compare
+    metric_scores[model_name] = evaluate(
+                                ~~~~~~~~^
+        qrels=qrels,
+        ^^^^^^^^^^^^
+    ...<4 lines>...
+        make_comparable=make_comparable,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\ranx\meta\evaluate.py", line 142, in evaluate
+    metric_scores_dict[metric] = metric_switch(m)(_qrels, _run, k, rel_lvl)
+                                 ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\ranx\metrics\ndcg.py", line 186, in ndcg
+    return _ndcg_parallel(qrels, run, k, rel_lvl, jarvelin=True)
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\numba\core\dispatcher.py", line 424, in _compile_for_args
+    error_rewrite(e, 'typing')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\numba\core\dispatcher.py", line 365, in error_rewrite
+    raise e.with_traceback(None)
+numba.core.errors.TypingError: Failed in nopython mode pipeline (step: nopython frontend)
+non-precise type pyobject
+During: typing of argument at C:\Users\LENOVO\anaconda3\Lib\site-packages\ranx\metrics\ndcg.py (68)
+
+File "C:\Users\LENOVO\anaconda3\Lib\site-packages\ranx\metrics\ndcg.py", line 68:
+def _ndcg(qrels, run, k, rel_lvl, jarvelin):
+    <source elided>
+
+@njit(cache=True, parallel=True)
+^
+
+During: Pass nopython_type_inference
+
+This error may have been caused by the following argument(s):
+- argument 0: Cannot determine Numba type of <class 'pandas.core.frame.DataFrame'>
+
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py  known ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+Traceback (most recent call last):
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\eval.py", line 71, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\eval.py", line 33, in main
+    if selected_df.empty:
+       ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'selected_df' where it is not associated with a value
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py  known ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+C:\Users\LENOVO\anaconda3\Lib\site-packages\ranx\metrics\ndcg.py:72: NumbaTypeSafetyWarning: unsafe cast from uint64 to int64. Precision may be lost.
+  scores[i] = _ndcg(qrels[i], run[i], k, rel_lvl, jarvelin)
+known Topics
+#    Model                   NDCG@1    NDCG@3    NDCG@5
+---  ----------------------  --------  --------  --------
+a    walert_intent           1.0000ᵇᶜ  1.0000ᵇᶜ  1.0000ᵇᶜ
+b    walert.rag.bm25         0.0000    0.0000    0.0000
+c    walert.rag.dense-faiss  0.5500ᵇ   0.6746ᵇ   0.7087ᵇ
+========================
+% Add in preamble
+\usepackage{graphicx}
+\usepackage{booktabs}
+========================
+
+
+% To change the table size, act on the resizebox argument `0.8`.
+\begin{table*}[ht]
+\centering
+\caption{
+Overall effectiveness of the models.
+The best results are highlighted in boldface.
+Superscripts denote significant differences in Tukey's HSD test with $p \le 0.01$.
+}
+\resizebox{0.8\textwidth}{!}{
+\begin{tabular}{c|l|c|c|c}
+\toprule
+\textbf{\#}
+& \textbf{Model}
+& \textbf{NDCG@1}
+& \textbf{NDCG@3}
+& \textbf{NDCG@5} \\
+\midrule
+a &
+walert\_intent &
+\textbf{1.0000}$^{bc}$\hphantom{} &
+\textbf{1.0000}$^{bc}$\hphantom{} &
+\textbf{1.0000}$^{bc}$\hphantom{} \\
+b &
+walert.rag.bm25 &
+0.0000\hphantom{$^{ac}$} &
+0.0000\hphantom{$^{ac}$} &
+0.0000\hphantom{$^{ac}$} \\
+c &
+walert.rag.dense-faiss &
+0.5500$^{b}$\hphantom{$^{a}$} &
+0.6746$^{b}$\hphantom{$^{a}$} &
+0.7087$^{b}$\hphantom{$^{a}$} \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:results}
+\end{table*}
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ eval.py  inferred ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+bash: eval.py: command not found
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py  inferred ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+inferred Topics
+#    Model                   NDCG@1    NDCG@3    NDCG@5
+---  ----------------------  --------  --------  --------
+a    walert_intent           1.0000ᵇᶜ  1.0000ᵇᶜ  1.0000ᵇᶜ
+b    walert.rag.bm25         0.0000    0.0000    0.0000
+c    walert.rag.dense-faiss  0.6944ᵇ   0.8046ᵇ   0.8282ᵇ
+========================
+% Add in preamble
+\usepackage{graphicx}
+\usepackage{booktabs}
+========================
+
+
+% To change the table size, act on the resizebox argument `0.8`.
+\begin{table*}[ht]
+\centering
+\caption{
+Overall effectiveness of the models.
+The best results are highlighted in boldface.
+Superscripts denote significant differences in Tukey's HSD test with $p \le 0.01$.
+}
+\resizebox{0.8\textwidth}{!}{
+\begin{tabular}{c|l|c|c|c}
+\toprule
+\textbf{\#}
+& \textbf{Model}
+& \textbf{NDCG@1}
+& \textbf{NDCG@3}
+& \textbf{NDCG@5} \\
+\midrule
+a &
+walert\_intent &
+\textbf{1.0000}$^{bc}$\hphantom{} &
+\textbf{1.0000}$^{bc}$\hphantom{} &
+\textbf{1.0000}$^{bc}$\hphantom{} \\
+b &
+walert.rag.bm25 &
+0.0000\hphantom{$^{ac}$} &
+0.0000\hphantom{$^{ac}$} &
+0.0000\hphantom{$^{ac}$} \\
+c &
+walert.rag.dense-faiss &
+0.6944$^{b}$\hphantom{$^{a}$} &
+0.8046$^{b}$\hphantom{$^{a}$} &
+0.8282$^{b}$\hphantom{$^{a}$} \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:results}
+\end{table*}
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$
