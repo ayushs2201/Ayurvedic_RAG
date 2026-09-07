@@ -1,0 +1,411 @@
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python data.py
+(244, 9)
+  question_id  subtopic passage_id  relevance_judgment
+0     T001Q01         0       P001                   2
+1     T002Q01         0       P002                   2
+2     T003Q01         0       P003                   2
+3     T004Q01         0       P004                   2
+4     T005Q01         0       P005                   2
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ bash encode.sh
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|█████████████████████████████████████████| 199/199 [00:00<00:00, 8318.13it/s]
+244it [00:00, 3479.15it/s]
+100%|████████████████████████████████████████████████████████████████| 8/8 [06:20<00:00, 47.54s/it]
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG
+/walert/quantitative_eval/src/retrieval (main)
+$ export CORPUS="../../data/collection"
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG
+/walert/quantitative_eval/src/retrieval (main)
+$ export INDEX="../../target/indexes/bm25"
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG
+/walert/quantitative_eval/src/retrieval (main)
+$ python -m pyserini.index.lucene \
+  --collection JsonCollection \
+  --input $CORPUS \
+  --language en \
+  --index $INDEX \
+  --generator DefaultLuceneDocumentGenerator \
+  --threads 4 \
+  --storePositions \
+  --storeDocvectors \
+  --storeRaw
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+2026-08-20 23:09:36,399 INFO  [main] index.IndexCollection (IndexCollection.java:645) - Setting log level to INFO
+2026-08-20 23:09:36,403 INFO  [main] index.IndexCollection (IndexCollection.java:648) - Starting indexer...
+2026-08-20 23:09:36,403 INFO  [main] index.IndexCollection (IndexCollection.java:649) - ============ Loading Parameters ============
+2026-08-20 23:09:36,405 INFO  [main] index.IndexCollection (IndexCollection.java:650) - DocumentCollection path: ../../data/collection
+2026-08-20 23:09:36,405 INFO  [main] index.IndexCollection (IndexCollection.java:651) - CollectionClass: JsonCollection
+2026-08-20 23:09:36,405 INFO  [main] index.IndexCollection (IndexCollection.java:652) - Generator: DefaultLuceneDocumentGenerator
+2026-08-20 23:09:36,405 INFO  [main] index.IndexCollection (IndexCollection.java:653) - Threads: 4
+2026-08-20 23:09:36,405 INFO  [main] index.IndexCollection (IndexCollection.java:654) - Language: en
+2026-08-20 23:09:36,405 INFO  [main] index.IndexCollection (IndexCollection.java:655) - Stemmer: porter
+2026-08-20 23:09:36,405 INFO  [main] index.IndexCollection (IndexCollection.java:656) - Keep stopwords? false
+2026-08-20 23:09:36,405 INFO  [main] index.IndexCollection (IndexCollection.java:657) - Stopwords: null
+2026-08-20 23:09:36,405 INFO  [main] index.IndexCollection (IndexCollection.java:658) - Store positi
+ons? true
+2026-08-20 23:09:36,405 INFO  [main] index.IndexCollection (IndexCollection.java:659) - Store docvectors? true
+2026-08-20 23:09:36,411 INFO  [main] index.IndexCollection (IndexCollection.java:660) - Store document "contents" field? false
+2026-08-20 23:09:36,411 INFO  [main] index.IndexCollection (IndexCollection.java:661) - Store document "raw" field? true
+2026-08-20 23:09:36,412 INFO  [main] index.IndexCollection (IndexCollection.java:662) - Additional fields to index: []
+2026-08-20 23:09:36,412 INFO  [main] index.IndexCollection (IndexCollection.java:663) - Optimize (merge segments)? false
+2026-08-20 23:09:36,412 INFO  [main] index.IndexCollection (IndexCollection.java:664) - Whitelist: null
+2026-08-20 23:09:36,412 INFO  [main] index.IndexCollection (IndexCollection.java:665) - Pretokenized?: false
+2026-08-20 23:09:36,412 INFO  [main] index.IndexCollection (IndexCollection.java:685) - Directly building Lucene indexes...
+2026-08-20 23:09:36,415 INFO  [main] index.IndexCollection (IndexCollection.java:686) - Index path: ../../target/indexes/bm25
+2026-08-20 23:09:36,418 INFO  [main] index.IndexCollection (IndexCollection.java:741) - ============ Indexing Collection ============
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\LENOVO\anaconda3\Lib\site-packages\pyserini\index\lucene\__main__.py", line 36, in <module>
+    JIndexCollection.main(args)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "jnius/jnius_export_class.pxi", line 896, in jnius.JavaMethod.__call__
+  File "jnius/jnius_export_class.pxi", line 1079, in jnius.JavaMethod.call_staticmethod
+  File "jnius/jnius_utils.pxi", line 79, in jnius.check_exception
+jnius.JavaException: JVM exception occurred: java.lang.IllegalArgumentException: indexCreatedVersionMajor is in the future: 9
+java.lang.IllegalArgumentException: indexCreatedVersionMajor is in the future: 9
+        org.apache.lucene.index.SegmentInfos.<init>(SegmentInfos.java:169)
+        org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:327)
+        org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:291)
+        org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:461)
+        org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:458)
+        org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:720)
+        org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:672)
+        org.apache.lucene.index.SegmentInfos.readLatestCommit(SegmentInfos.java:463)
+        org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:979)
+        io.anserini.index.IndexCollection.run(IndexCollection.java:841)
+        io.anserini.index.IndexCollection.main(IndexCollection.java:970)
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ rm -rf "../../target/indexes/bm25"
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python -m pyserini.index.lucene \
+  --collection JsonCollection \
+  --input $CORPUS \
+  --language en \
+  --index $INDEX \
+  --generator DefaultLuceneDocumentGenerator \
+  --threads 4 \
+  --storePositions \
+  --storeDocvectors \
+  --storeRaw
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+2026-08-21 01:30:11,948 INFO  [main] index.IndexCollection (IndexCollection.java:645) - Setting log level to INFO
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:648) - Starting indexer...
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:649) - ============ Loading Parameters ============
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:650) - DocumentCollection path: ../../data/collection
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:651) - CollectionClass: JsonCollection
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:652) - Generator: DefaultLuceneDocumentGenerator
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:653) - Threads: 4
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:654) - Language: en
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:655) - Stemmer: porter
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:656) - Keep stopwords? false
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:657) - Stopwords: null
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:658) - Store positions? true
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:659) - Store docvectors? true
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:660) - Store document "contents" field? false
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:661) - Store document "raw" field? true
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:662) - Additional fields to index: []
+2026-08-21 01:30:11,951 INFO  [main] index.IndexCollection (IndexCollection.java:663) - Optimize (merge segments)? false
+2026-08-21 01:30:11,959 INFO  [main] index.IndexCollection (IndexCollection.java:664) - Whitelist: null
+2026-08-21 01:30:11,959 INFO  [main] index.IndexCollection (IndexCollection.java:665) - Pretokenized?: false
+2026-08-21 01:30:11,961 INFO  [main] index.IndexCollection (IndexCollection.java:685) - Directly building Lucene indexes...
+2026-08-21 01:30:11,961 INFO  [main] index.IndexCollection (IndexCollection.java:686) - Index path: ../../target/indexes/bm25
+2026-08-21 01:30:11,961 INFO  [main] index.IndexCollection (IndexCollection.java:741) - ============ Indexing Collection ============
+2026-08-21 01:30:12,222 INFO  [main] index.IndexCollection (IndexCollection.java:845) - Thread pool with 4 threads initialized.
+2026-08-21 01:30:12,222 INFO  [main] index.IndexCollection (IndexCollection.java:847) - Initializing collection in ..\..\data\collection
+2026-08-21 01:30:12,222 INFO  [main] index.IndexCollection (IndexCollection.java:856) - 1 file found
+2026-08-21 01:30:12,222 INFO  [main] index.IndexCollection (IndexCollection.java:857) - Starting to index...
+2026-08-21 01:30:12,904 DEBUG [pool-2-thread-1] index.IndexCollection$LocalIndexerThread (IndexCollection.java:250) - collection\collection.jsonl: 244 docs added.
+2026-08-21 01:30:13,390 INFO  [main] index.IndexCollection (IndexCollection.java:941) - Indexing Complete! 244 documents indexed
+2026-08-21 01:30:13,390 INFO  [main] index.IndexCollection (IndexCollection.java:942) - ============ Final Counter Values ============
+2026-08-21 01:30:13,390 INFO  [main] index.IndexCollection (IndexCollection.java:943) - indexed:              244
+2026-08-21 01:30:13,390 INFO  [main] index.IndexCollection (IndexCollection.java:944) - unindexable:            0
+2026-08-21 01:30:13,390 INFO  [main] index.IndexCollection (IndexCollection.java:945) - empty:                  0
+2026-08-21 01:30:13,390 INFO  [main] index.IndexCollection (IndexCollection.java:946) - skipped:                0
+2026-08-21 01:30:13,390 INFO  [main] index.IndexCollection (IndexCollection.java:947) - errors:                 0
+2026-08-21 01:30:13,404 INFO  [main] index.IndexCollection (IndexCollection.java:950) - Total 244 documents indexed in 00:00:01
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python search.py --run bm25
+Initializing Lucene BM25 Searcher...
+Done! Results written to ../../target/runs/rag-bm25.txt
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python search.py --run dense-faiss
+Initializing FAISS Dense Searcher...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 199/199 [00:00<00:00, 6428.18it/s]
+Done! Results written to ../../target/runs/rag-dense-faiss.txt
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py  inferred ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+inferred Topics
+#    Model                   NDCG@1    NDCG@3    NDCG@5
+---  ----------------------  --------  --------  --------
+a    walert_intent           1.0000ᵇᶜ  1.0000ᵇᶜ  1.0000ᵇᶜ
+b    walert.rag.bm25         0.5278    0.6476    0.6736
+c    walert.rag.dense-faiss  0.6944ᵇ   0.8046ᵇ   0.8282ᵇ
+========================
+% Add in preamble
+\usepackage{graphicx}
+\usepackage{booktabs}
+========================
+
+
+% To change the table size, act on the resizebox argument `0.8`.
+\begin{table*}[ht]
+\centering
+\caption{
+Overall effectiveness of the models.
+The best results are highlighted in boldface.
+Superscripts denote significant differences in Tukey's HSD test with $p \le 0.01$.
+}
+\resizebox{0.8\textwidth}{!}{
+\begin{tabular}{c|l|c|c|c}
+\toprule
+\textbf{\#}
+& \textbf{Model}
+& \textbf{NDCG@1}
+& \textbf{NDCG@3}
+& \textbf{NDCG@5} \\
+\midrule
+a &
+walert\_intent &
+\textbf{1.0000}$^{bc}$\hphantom{} &
+\textbf{1.0000}$^{bc}$\hphantom{} &
+\textbf{1.0000}$^{bc}$\hphantom{} \\
+b &
+walert.rag.bm25 &
+0.5278\hphantom{$^{ac}$} &
+0.6476\hphantom{$^{ac}$} &
+0.6736\hphantom{$^{ac}$} \\
+c &
+walert.rag.dense-faiss &
+0.6944$^{b}$\hphantom{$^{a}$} &
+0.8046$^{b}$\hphantom{$^{a}$} &
+0.8282$^{b}$\hphantom{$^{a}$} \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:results}
+\end{table*}
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ #python eval.py  known ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py  known ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+known Topics
+#    Model                   NDCG@1    NDCG@3    NDCG@5
+---  ----------------------  --------  --------  --------
+a    walert_intent           1.0000ᵇᶜ  1.0000ᵇᶜ  1.0000ᵇᶜ
+b    walert.rag.bm25         0.3900    0.5446    0.5773
+c    walert.rag.dense-faiss  0.5500    0.6746    0.7087ᵇ
+========================
+% Add in preamble
+\usepackage{graphicx}
+\usepackage{booktabs}
+========================
+
+
+% To change the table size, act on the resizebox argument `0.8`.
+\begin{table*}[ht]
+\centering
+\caption{
+Overall effectiveness of the models.
+The best results are highlighted in boldface.
+Superscripts denote significant differences in Tukey's HSD test with $p \le 0.01$.
+}
+\resizebox{0.8\textwidth}{!}{
+\begin{tabular}{c|l|c|c|c}
+\toprule
+\textbf{\#}
+& \textbf{Model}
+& \textbf{NDCG@1}
+& \textbf{NDCG@3}
+& \textbf{NDCG@5} \\
+\midrule
+a &
+walert\_intent &
+\textbf{1.0000}$^{bc}$\hphantom{} &
+\textbf{1.0000}$^{bc}$\hphantom{} &
+\textbf{1.0000}$^{bc}$\hphantom{} \\
+b &
+walert.rag.bm25 &
+0.3900\hphantom{$^{ac}$} &
+0.5446\hphantom{$^{ac}$} &
+0.5773\hphantom{$^{ac}$} \\
+c &
+walert.rag.dense-faiss &
+0.5500\hphantom{$^{ab}$} &
+0.6746\hphantom{$^{ab}$} &
+0.7087$^{b}$\hphantom{$^{a}$} \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:results}
+\end{table*}
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python search_intent.py
+C:\Users\LENOVO\anaconda3\python.exe: can't open file 'D:\\RMIT\\SEM2\\Case studies in Datascience\\WIL Project\\Ayurvedic_RAG\\Ayurvedic_RAG\\walert\\quantitative_eval\\src\\retrieval\\search_intent.py': [Errno 2] No such file or directory
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python data.py
+(244, 9)
+  question_id  subtopic passage_id  relevance_judgment
+0     T001Q01         0       P001                   2
+1     T002Q01         0       P002                   2
+2     T003Q01         0       P003                   2
+3     T004Q01         0       P004                   2
+4     T005Q01         0       P005                   2
+No passages found for intent: WomensHealth_PCOS_01
+WomensHealth_PCOS_01
+Traceback (most recent call last):
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\data.py", line 101, in <module>
+    parse_walert_run(TOPICS, GROUNDTRUTH, WALERT_INTENT, INTENT_MAPPING,COLLECTION)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RMIT\SEM2\Case studies in Datascience\WIL Project\Ayurvedic_RAG\Ayurvedic_RAG\walert\quantitative_eval\src\retrieval\data.py", line 87, in parse_walert_run
+    line = "{} Q0 {} 1 1.0 {}\n".format(question_id, result, runid)
+                                                     ^^^^^^
+UnboundLocalError: cannot access local variable 'result' where it is not associated with a value
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ ^C
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python data.py
+(244, 9)
+  question_id  subtopic passage_id  relevance_judgment
+0     T001Q01         0       P001                   2
+1     T002Q01         0       P002                   2
+2     T003Q01         0       P003                   2
+3     T004Q01         0       P004                   2
+4     T005Q01         0       P005                   2
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py  inferred ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+inferred Topics
+#    Model                   NDCG@1    NDCG@3    NDCG@5
+---  ----------------------  --------  --------  --------
+a    walert_intent           0.0417    0.0417    0.0417
+b    walert.rag.bm25         0.5278ᵃ   0.6476ᵃ   0.6736ᵃ
+c    walert.rag.dense-faiss  0.6944ᵃᵇ  0.8046ᵃᵇ  0.8282ᵃᵇ
+========================
+% Add in preamble
+\usepackage{graphicx}
+\usepackage{booktabs}
+========================
+
+
+% To change the table size, act on the resizebox argument `0.8`.
+\begin{table*}[ht]
+\centering
+\caption{
+Overall effectiveness of the models.
+The best results are highlighted in boldface.
+Superscripts denote significant differences in Tukey's HSD test with $p \le 0.01$.
+}
+\resizebox{0.8\textwidth}{!}{
+\begin{tabular}{c|l|c|c|c}
+\toprule
+\textbf{\#}
+& \textbf{Model}
+& \textbf{NDCG@1}
+& \textbf{NDCG@3}
+& \textbf{NDCG@5} \\
+\midrule
+a &
+walert\_intent &
+0.0417\hphantom{$^{bc}$} &
+0.0417\hphantom{$^{bc}$} &
+0.0417\hphantom{$^{bc}$} \\
+b &
+walert.rag.bm25 &
+0.5278$^{a}$\hphantom{$^{c}$} &
+0.6476$^{a}$\hphantom{$^{c}$} &
+0.6736$^{a}$\hphantom{$^{c}$} \\
+c &
+walert.rag.dense-faiss &
+\textbf{0.6944}$^{ab}$\hphantom{} &
+\textbf{0.8046}$^{ab}$\hphantom{} &
+\textbf{0.8282}$^{ab}$\hphantom{} \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:results}
+\end{table*}
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$ python eval.py  known ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+known Topics
+#    Model                   NDCG@1    NDCG@3    NDCG@5
+---  ----------------------  --------  --------  --------
+a    walert_intent           0.0500    0.0500    0.0500
+b    walert.rag.bm25         0.3900ᵃ   0.5446ᵃ   0.5773ᵃ
+c    walert.rag.dense-faiss  0.5500ᵃ   0.6746ᵃ   0.7087ᵃ
+========================
+% Add in preamble
+\usepackage{graphicx}
+\usepackage{booktabs}
+========================
+
+
+% To change the table size, act on the resizebox argument `0.8`.
+\begin{table*}[ht]
+\centering
+\caption{
+Overall effectiveness of the models.
+The best results are highlighted in boldface.
+Superscripts denote significant differences in Tukey's HSD test with $p \le 0.01$.
+}
+\resizebox{0.8\textwidth}{!}{
+\begin{tabular}{c|l|c|c|c}
+\toprule
+\textbf{\#}
+& \textbf{Model}
+& \textbf{NDCG@1}
+& \textbf{NDCG@3}
+& \textbf{NDCG@5} \\
+\midrule
+a &
+walert\_intent &
+0.0500\hphantom{$^{bc}$} &
+0.0500\hphantom{$^{bc}$} &
+0.0500\hphantom{$^{bc}$} \\
+b &
+walert.rag.bm25 &
+0.3900$^{a}$\hphantom{$^{c}$} &
+0.5446$^{a}$\hphantom{$^{c}$} &
+0.5773$^{a}$\hphantom{$^{c}$} \\
+c &
+walert.rag.dense-faiss &
+\textbf{0.5500}$^{a}$\hphantom{$^{b}$} &
+\textbf{0.6746}$^{a}$\hphantom{$^{b}$} &
+\textbf{0.7087}$^{a}$\hphantom{$^{b}$} \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:results}
+\end{table*}
+(base)
+LENOVO@ISHA MINGW64 /d/RMIT/SEM2/Case studies in Datascience/WIL Project/Ayurvedic_RAG/Ayurvedic_RAG/walert/quantitative_eval/src/retrieval (main)
+$

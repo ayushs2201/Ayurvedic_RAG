@@ -17,7 +17,7 @@ This project builds a **grounded, retrieval-augmented assistant** over a curated
 - **Underexplored domain:** Few RAG projects touch traditional/complementary medicine — room for original contribution rather than a saturated use case.
 - **Real tension for faithfulness testing:** The corpus mixes classical remedies with modern evidence reviews that explicitly hedge ("no clinical evidence yet") — ideal ground truth for testing whether a RAG system preserves uncertainty instead of overclaiming.
 - **Global, low-cost relevance:** Practised and studied on every continent; guidance is largely diet-, herb-, and lifestyle-based rather than dependent on costly interventions.
-- **Real stakeholders:** health-conscious individuals, Ayurvedic students/practitioners, researchers, and the herbal/wellness industry.
+- **Real stakeholders:** Ayurvedic students/practitioners, researchers worldwide.
 
 ## Dataset
 
@@ -71,15 +71,24 @@ Data Sources → Preprocessing → Embedding → Vector Search → LLM Generatio
 
 ## Roadmap
 
-- [ ] Finalise curated document subset
+- [ ] Preprocess corpus using NLP Technique
 - [ ] Build baseline RAG pipeline
 - [ ] Build test-question set + evaluation harness
 - [ ] Tune retrieval & prompting against evaluation results
 - [ ] Package demo app and final report
 
+
 ## Team
 
-Group 22 — RMIT University, Master of Data Science (MC267)
+**Group 22** — RMIT University, Case Studies in Data Science
+
+| Student ID | Name | Role |
+|---|---|---|
+| s4210909 | Ayush Vijayprasad Shrivastava | Technical Lead |
+| s4054011 | Rose Munro | Project Manager |
+| s4224187 | Tariq Iqbal | Research Director |
+| s4234819 | Vivyn Madhanraj | Product and Evaluation Lead |
+
 
 ## License
 

@@ -1,0 +1,1839 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "that is all i needed thank you",
+            "nothing else thank you",
+            "bye",
+            "bubye",
+            "goodbye",
+            "that will be all for today thank you"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "I'm feeling lost for questions",
+            "I have no idea what to ask",
+            "I'm confused about what to ask you",
+            "I'm unsure of what questions to pose to you",
+            "I'm in a state of confusion not knowing what to ask you",
+            "support",
+            "help",
+            "i do not know what to ask you",
+            "what are you capable of",
+            "what are your capabilities",
+            "how can you help me",
+            "what kind of questions will you answer",
+            "what can you do for me",
+            "what can you help me with",
+            "hey i dont know what to ask"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "About_me",
+          "samples": [
+            "tell me about you",
+            "can you tell me a little bit about yourself",
+            "who are you",
+            "what are you",
+            "What is your name"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": [
+            "what did you say",
+            "say once more",
+            "I'm having trouble understanding. Could you kindly say that once more",
+            "I'm finding it challenging to keep up. Can you please repeat what you just said",
+            "I'm having a bit of difficulty following you. Could you repeat that please",
+            "could please say that again",
+            "pardon",
+            "say again",
+            "repeat"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Creator",
+          "samples": [
+            "I'm curious who developed your amazing capabilities",
+            "By whom were you created",
+            "Which genius brought you into existence",
+            "The people who developed you must be incredibly talented. Who are they",
+            "who built you",
+            "who are your developers",
+            "who developed you",
+            "Who created you",
+            "Who made you"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Motivation",
+          "samples": [
+            "Tell me the reason why you were brought into existence",
+            "What was the motivation behind developing you",
+            "Why were you created"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "AI_Enquiry",
+          "samples": [
+            "are you an A eye sister",
+            "are you an A.I. system",
+            "Walert are you an artificial intelligence system",
+            "Are you an AI"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Personality",
+          "samples": [
+            "Tell me more about your personality and style",
+            "Tell me more about your demeanor and style",
+            "Do you have a personality or a unique character Walert",
+            "What's your personality"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "AutoLearn",
+          "samples": [
+            "Do you become smarter over time",
+            "Are you capable of learning from our interactions",
+            "Can you learn and improve"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_01",
+          "samples": [
+            "What Ayurvedic treatments are effective for managing PCOS symptoms?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_01",
+          "samples": [
+            "How can Ayurveda help with hypothyroidism?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_01",
+          "samples": [
+            "What can help alleviate severe PMS symptoms?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_02",
+          "samples": [
+            "Why is managing stress important in PCOS treatment?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_02",
+          "samples": [
+            "Are there dietary changes that can support thyroid function?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_02",
+          "samples": [
+            "What role do herbs play in managing PMS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_03",
+          "samples": [
+            "How can lifestyle changes impact PCOS management?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_03",
+          "samples": [
+            "What should I avoid if I have an underactive thyroid?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_03",
+          "samples": [
+            "Can yoga help with PMS symptoms?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_04",
+          "samples": [
+            "What are the Ayurvedic perspectives on managing PCOS effectively?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_04",
+          "samples": [
+            "How does Ayurveda approach the treatment of hypothyroidism?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_04",
+          "samples": [
+            "What should I do about severe PMS symptoms according to Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_05",
+          "samples": [
+            "What lifestyle changes can help manage PCOS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_05",
+          "samples": [
+            "Are there any natural remedies in Ayurveda for hyperthyroidism?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_05",
+          "samples": [
+            "Why do I experience strong mood swings with PMS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_06",
+          "samples": [
+            "Can yoga really help with PCOS symptoms?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_06",
+          "samples": [
+            "How can diet influence my thyroid health?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_06",
+          "samples": [
+            "What herbal treatments are recommended for alleviating PMS symptoms?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_07",
+          "samples": [
+            "Is there a connection between weight management and PCOS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_08",
+          "samples": [
+            "What is the Ayurvedic understanding of PCOS and how can I manage my symptoms naturally?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_07",
+          "samples": [
+            "How does Ayurveda approach hypothyroidism?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_07",
+          "samples": [
+            "What can I do to alleviate severe PMS symptoms naturally?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_09",
+          "samples": [
+            "Is there an Ayurvedic remedy for weight management in PCOS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_08",
+          "samples": [
+            "What lifestyle changes are recommended for someone with Hashimoto's thyroiditis in Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_08",
+          "samples": [
+            "How can I balance my emotions during PMS using Ayurvedic practices?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_10",
+          "samples": [
+            "Can stress management contribute to improving PCOS symptoms?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_09",
+          "samples": [
+            "Are there specific Ayurvedic foods I should consume to support my thyroid health?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_09",
+          "samples": [
+            "What Ayurvedic treatments can help with bloating during PMS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_11",
+          "samples": [
+            "What causes PCOS in Ayurvedic terms, and how can I naturally manage it?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_10",
+          "samples": [
+            "How does Ayurveda view hypothyroidism, and what treatments are available?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_10",
+          "samples": [
+            "Can Ayurveda help alleviate the symptoms of PMS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_12",
+          "samples": [
+            "Are there specific Ayurvedic diets recommended for managing PCOS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_11",
+          "samples": [
+            "What lifestyle changes can I adopt to support my thyroid health according to Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_11",
+          "samples": [
+            "Why do I experience migraines during my menstrual cycle, and how can Ayurveda help?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_13",
+          "samples": [
+            "What role does stress play in PCOS management according to Ayurvedic principles?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_12",
+          "samples": [
+            "What Ayurvedic herbs can support my thyroid function?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_12",
+          "samples": [
+            "How can I manage mood swings associated with PMS from an Ayurvedic perspective?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_14",
+          "samples": [
+            "What is PCOS and how does Ayurveda approach its management?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_13",
+          "samples": [
+            "How does Ayurveda explain hypothyroidism and its treatment?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_13",
+          "samples": [
+            "What causes PMS symptoms and how can Ayurveda help alleviate them?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_15",
+          "samples": [
+            "Are there specific diets recommended for managing PCOS in Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_14",
+          "samples": [
+            "What lifestyle changes can support thyroid health according to Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_14",
+          "samples": [
+            "Can stress impact PMS symptoms, and how does Ayurveda suggest managing it?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_16",
+          "samples": [
+            "Is weight management essential for PCOS treatment in Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_15",
+          "samples": [
+            "What herbs are beneficial for managing thyroid disorders in Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_15",
+          "samples": [
+            "How does Ayurveda suggest managing mood swings related to PMS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_17",
+          "samples": [
+            "What is the Ayurvedic perspective on Polycystic Ovary Syndrome (PCOS)?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_16",
+          "samples": [
+            "How does Ayurveda treat hypothyroidism?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_16",
+          "samples": [
+            "What can I do about severe PMS symptoms naturally?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_18",
+          "samples": [
+            "Can Ayurvedic herbs really help reduce the symptoms of PCOS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_17",
+          "samples": [
+            "What causes thyroid disorders from an Ayurvedic perspective?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_17",
+          "samples": [
+            "How can I manage mood swings associated with PMS in Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_19",
+          "samples": [
+            "Are there dietary recommendations for managing PCOS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_Thyroid_18",
+          "samples": [
+            "How does stress impact thyroid health from an Ayurvedic viewpoint?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PMS_18",
+          "samples": [
+            "What Ayurvedic practices can help relieve physical discomfort during PMS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "WomensHealth_PCOS_20",
+          "samples": [
+            "Is exercise important in managing PCOS symptoms?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_01",
+          "samples": [
+            "What causes weight gain in Ayurveda, and how can it be managed?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_02",
+          "samples": [
+            "How does Ayurveda address insulin resistance?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_03",
+          "samples": [
+            "What role does digestive health play in managing diabetes?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_04",
+          "samples": [
+            "Is high blood pressure treatable through Ayurvedic methods?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_05",
+          "samples": [
+            "What dietary changes are recommended for someone with high cholesterol?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_06",
+          "samples": [
+            "Can Ayurvedic practices help with cravings and overeating?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_07",
+          "samples": [
+            "What Ayurvedic herbs are effective in managing metabolic syndrome?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_08",
+          "samples": [
+            "How can lifestyle changes impact blood pressure in Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_09",
+          "samples": [
+            "What is the importance of Agni in weight management?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_10",
+          "samples": [
+            "What are the signs of a disturbed Agni related to metabolic issues?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_01",
+          "samples": [
+            "What causes uncontrolled weight gain in my case?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_02",
+          "samples": [
+            "How does Ayurveda approach diabetes management?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_03",
+          "samples": [
+            "Why is my blood pressure so high, and what can I do to lower it?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_04",
+          "samples": [
+            "Can Ayurveda help me lose weight sustainably?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_05",
+          "samples": [
+            "What role does digestion (Agni) play in managing diabetes?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_06",
+          "samples": [
+            "Is stress contributing to my high blood pressure?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_07",
+          "samples": [
+            "What are the signs of Ama in my body related to my metabolic health?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_08",
+          "samples": [
+            "Can herbal supplements help manage my weight and diabetes?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_09",
+          "samples": [
+            "What lifestyle changes can I make to lower my risk of developing diabetes?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_10",
+          "samples": [
+            "How does Ayurveda prescribe the treatment of hypertension?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_11",
+          "samples": [
+            "What is the primary Ayurvedic cause of weight gain, and how can I manage it effectively?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_12",
+          "samples": [
+            "How does diabetes manifest according to Ayurveda, and what can I do to prevent or manage it?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_13",
+          "samples": [
+            "Why do I experience fluctuating blood pressure, and what Ayurvedic practices can help stabilize it?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_14",
+          "samples": [
+            "Can you explain how Ama affects my metabolism and what steps I can take to reduce it?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_15",
+          "samples": [
+            "What role does Agni play in my ability to maintain a healthy weight?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_16",
+          "samples": [
+            "What are the Ayurvedic recommendations for managing insulin resistance?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_17",
+          "samples": [
+            "How can I use Ayurvedic herbs to help lower my high blood pressure?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_18",
+          "samples": [
+            "Is there a connection between emotional health and metabolic disorders in Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_19",
+          "samples": [
+            "What dietary changes would you recommend for someone with a predisposition to metabolic syndrome?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_20",
+          "samples": [
+            "Can lifestyle habits impact my metabolism, and what changes should I consider implementing?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_11",
+          "samples": [
+            "What role does Agni play in weight management?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_12",
+          "samples": [
+            "How does an imbalance in Doshas contribute to diabetes?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_13",
+          "samples": [
+            "What is the Ayurvedic approach to managing high blood pressure?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_14",
+          "samples": [
+            "Can Ayurveda help with obesity issues? How?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_15",
+          "samples": [
+            "Is there an Ayurvedic herbal remedy for controlling blood sugar?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_16",
+          "samples": [
+            "What dietary changes are recommended for someone with elevated cholesterol?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_17",
+          "samples": [
+            "How does stress impact metabolic health, and what can I do about it?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_18",
+          "samples": [
+            "What lifestyle changes can help in reducing body fat?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_WeightDiabetesBP_19",
+          "samples": [
+            "Can Ayurveda help prevent metabolic syndrome?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_21",
+          "samples": [
+            "What are the Ayurvedic recommendations for managing weight gain?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_22",
+          "samples": [
+            "How can Ayurveda help control diabetes?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_23",
+          "samples": [
+            "What lifestyle changes can help with high blood pressure?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_24",
+          "samples": [
+            "Can Ayurveda cure insulin resistance?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_25",
+          "samples": [
+            "What are the Ayurvedic dietary guidelines for a diabetic patient?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_26",
+          "samples": [
+            "How is obesity viewed in Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_27",
+          "samples": [
+            "What Ayurvedic herbs are beneficial for enhancing metabolism?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_28",
+          "samples": [
+            "What is the role of Agni in weight management?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_29",
+          "samples": [
+            "How can stress impact metabolic health according to Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Metabolic_30",
+          "samples": [
+            "Is fasting beneficial for metabolic health in Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_01",
+          "samples": [
+            "What can be the cause of my persistent acidity and how can Ayurveda help?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_02",
+          "samples": [
+            "What role does Agni play in digestion and how can I strengthen it?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_03",
+          "samples": [
+            "Why do I get bloated after eating certain foods, and what can I do?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_04",
+          "samples": [
+            "How can I identify if I have Ama in my body?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_05",
+          "samples": [
+            "Can stress impact my digestive health, and what can Ayurveda offer?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_06",
+          "samples": [
+            "What dietary changes can help with IBS symptoms?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_07",
+          "samples": [
+            "How does Ayurveda approach the treatment of gastritis?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_08",
+          "samples": [
+            "Are there specific herbs I can take to improve my digestion?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_09",
+          "samples": [
+            "What lifestyle changes can improve my overall digestive health?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_10",
+          "samples": [
+            "I often experience heartburn, especially at night. How can I manage this naturally?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_01",
+          "samples": [
+            "What causes my frequent bloating and gas after meals?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_02",
+          "samples": [
+            "Why do I experience acid reflux, especially at night?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_03",
+          "samples": [
+            "Can stress impact my digestive health and contribute to IBS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_04",
+          "samples": [
+            "What dietary changes can I make to alleviate my symptoms of IBS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_05",
+          "samples": [
+            "Why do I have cravings for sweets, even when I'm not hungry?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_06",
+          "samples": [
+            "How can I determine if my digestive issues are due to Ama?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_07",
+          "samples": [
+            "What are natural remedies for severe acidity?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_08",
+          "samples": [
+            "Is it normal to experience alternating constipation and diarrhea?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_09",
+          "samples": [
+            "How can Ayurveda help with chronic digestive issues?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_10",
+          "samples": [
+            "Are there specific foods to improve my digestive fire (Agni)?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_11",
+          "samples": [
+            "What causes chronic acidity, and how can Ayurveda help?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_12",
+          "samples": [
+            "Why do I experience bloating and gas after meals?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_13",
+          "samples": [
+            "I have alternating bouts of diarrhea and constipation. What does Ayurveda suggest?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_14",
+          "samples": [
+            "How can I enhance my digestion and appetite naturally?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_15",
+          "samples": [
+            "Are spicy foods bad for my acidity problem?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_16",
+          "samples": [
+            "What role does stress play in my digestive issues?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_17",
+          "samples": [
+            "What dietary changes should I make for IBS?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_18",
+          "samples": [
+            "How can I naturally relieve constipation?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_19",
+          "samples": [
+            "Is it safe to take herbal supplements for digestion?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_AgniIBSAcidity_20",
+          "samples": [
+            "What lifestyle practices can support better digestion?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_11",
+          "samples": [
+            "What causes my frequent bloating and gas, and how can Ayurveda help?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_12",
+          "samples": [
+            "I often experience acid reflux. What is the underlying cause in Ayurvedic terms?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_13",
+          "samples": [
+            "What can I do to improve my weak digestion and frequent constipation?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_14",
+          "samples": [
+            "How can I manage my Irritable Bowel Syndrome (IBS) naturally?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_15",
+          "samples": [
+            "What dietary changes should I make to reduce acidity?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_16",
+          "samples": [
+            "Why do I have food sensitivities, and how can Ayurveda address this?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_17",
+          "samples": [
+            "Can stress affect my digestion, and how can I alleviate this?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_18",
+          "samples": [
+            "I have a bitter taste in my mouth and frequent heartburn; what does this indicate?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_19",
+          "samples": [
+            "What role does Ayurveda suggest for cleansing the digestive system?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "Digestion_20",
+          "samples": [
+            "How can I prevent indigestion after meals?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_01",
+          "samples": [
+            "What are the causes of frequent acne breakouts in my teenage years, and how can Ayurveda help?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_02",
+          "samples": [
+            "How can I treat my oily scalp and dandruff using Ayurvedic principles?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_03",
+          "samples": [
+            "What role does diet play in managing skin conditions like eczema?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_04",
+          "samples": [
+            "Can Ayurveda help with premature graying of hair?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_05",
+          "samples": [
+            "What should I do about my sensitive skin that reacts to products?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_06",
+          "samples": [
+            "How does hydration affect my skin health according to Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_07",
+          "samples": [
+            "What home remedies can I use to soothe sunburned skin?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_08",
+          "samples": [
+            "How can I improve the health and luster of my hair?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_09",
+          "samples": [
+            "What should I consider when dealing with psoriasis?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_10",
+          "samples": [
+            "How can seasonal changes affect my skin and hair health?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_11",
+          "samples": [
+            "What causes my acne and how can I treat it using Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_12",
+          "samples": [
+            "Why am I experiencing excessive hair fall, and what can I do about it?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_13",
+          "samples": [
+            "What home remedies can help with my hyperpigmentation?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_14",
+          "samples": [
+            "How can I soothe my sunburn using Ayurvedic methods?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_15",
+          "samples": [
+            "What is the role of detoxification in regaining healthy skin?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_16",
+          "samples": [
+            "What dietary changes should I make to improve my scalp health?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_17",
+          "samples": [
+            "Why am I experiencing itchy skin and how can Ayurveda help?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_18",
+          "samples": [
+            "What Ayurvedic herbs can help rejuvenate my skin?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_19",
+          "samples": [
+            "How does stress impact my hair health and what can I do?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_20",
+          "samples": [
+            "Why does my skin become oily and prone to acne, especially in the summer?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_21",
+          "samples": [
+            "What can I do to treat my scalp that is often itchy and exhibits flaking?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_22",
+          "samples": [
+            "I have dark circles under my eyes; what causes this in Ayurvedic terms?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_23",
+          "samples": [
+            "How can I reduce inflammation and redness on my skin?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_24",
+          "samples": [
+            "What Ayurvedic treatments are effective for hair loss linked to stress?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_25",
+          "samples": [
+            "My skin often appears dull and lifeless; what could be the reason?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_26",
+          "samples": [
+            "How can I manage excessive sweating and body odor?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_27",
+          "samples": [
+            "What can I do for skin hyperpigmentation, especially after acne?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_28",
+          "samples": [
+            "What lifestyle changes can help strengthen my hair and improve its texture?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkinHair_PittaDetox_29",
+          "samples": [
+            "How can I deal with heat rash during the hot months?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_01",
+          "samples": [
+            "Why am I feeling constantly tired and unable to concentrate at work?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_02",
+          "samples": [
+            "I have trouble falling asleep and wake up frequently during the night; what could be the cause?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_03",
+          "samples": [
+            "How can I manage stress better, especially during busy work periods?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_04",
+          "samples": [
+            "What dietary changes should I make to improve my overall well-being?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_05",
+          "samples": [
+            "I've been dealing with corporate burnout; how can Ayurveda help me recover?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_06",
+          "samples": [
+            "Can yoga really help with my anxiety and stress levels?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_07",
+          "samples": [
+            "What role does Agni play in stress management?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_08",
+          "samples": [
+            "How does seasonal change affect my mental wellness?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_09",
+          "samples": [
+            "What are some natural remedies to improve focus and productivity?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_10",
+          "samples": [
+            "How can I create a better work-life balance according to Ayurvedic principles?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_11",
+          "samples": [
+            "Why do I feel constantly fatigued despite getting enough sleep?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_12",
+          "samples": [
+            "How can I manage stress that is affecting my sleep?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_13",
+          "samples": [
+            "What natural remedies can help with symptoms of burnout?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_14",
+          "samples": [
+            "I have trouble concentrating during work, what can I do to improve focus?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_15",
+          "samples": [
+            "What role does Ayurveda play in managing anxiety related to work pressure?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_16",
+          "samples": [
+            "How can I naturally improve my sleep cycle?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_17",
+          "samples": [
+            "What lifestyle changes can help with chronic headaches due to workplace stress?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_18",
+          "samples": [
+            "I often wake up in the middle of the night; what could be causing this?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_19",
+          "samples": [
+            "Is there an Ayurvedic approach to improve work-life balance?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_20",
+          "samples": [
+            "How does diet influence my mood and energy levels?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_21",
+          "samples": [
+            "Why do I feel constantly exhausted despite getting enough sleep?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_22",
+          "samples": [
+            "What Ayurvedic advice can help me manage workplace stress effectively?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_23",
+          "samples": [
+            "How can I improve my sleep quality naturally?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_24",
+          "samples": [
+            "Why do I experience frequent headaches in a corporate environment?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_25",
+          "samples": [
+            "What can I do to combat feelings of burnout?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_26",
+          "samples": [
+            "Can Ayurveda help address anxiety related to corporate pressures?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_27",
+          "samples": [
+            "What dietary changes can help reduce stress levels?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_28",
+          "samples": [
+            "How do I strengthen my immune system while dealing with stress?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_29",
+          "samples": [
+            "Why am I having difficulty concentrating at work?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_30",
+          "samples": [
+            "How can I manage irritability caused by stress at work?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_31",
+          "samples": [
+            "What causes my sleep disturbances during periods of high work stress?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_32",
+          "samples": [
+            "Why do I experience fatigue and burnout despite getting enough sleep?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_33",
+          "samples": [
+            "How can I manage my anxiety related to corporate deadlines?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_34",
+          "samples": [
+            "What natural remedies can help me deal with corporate burnout?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_35",
+          "samples": [
+            "What dietary changes can support better sleep?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_36",
+          "samples": [
+            "Why do I feel mentally foggy and unfocused at work?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_37",
+          "samples": [
+            "How does emotional eating connect to my stress levels?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_38",
+          "samples": [
+            "What lifestyle changes can I make to combat daily stress?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_39",
+          "samples": [
+            "Is there a connection between my digestion and my emotional health?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ModernLifestyle_StressSleepCorporateBurnout_40",
+          "samples": [
+            "What role does routine play in dealing with stress?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_01",
+          "samples": [
+            "I feel lethargic and slow in the winter months. Why is that?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_02",
+          "samples": [
+            "Why do I have constant digestive issues during the summer?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_03",
+          "samples": [
+            "Can my emotional state affect my physical health according to Ayurveda?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_04",
+          "samples": [
+            "I've been feeling anxious and restless, what might be the cause?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_05",
+          "samples": [
+            "What is the relationship between seasonal changes and dosha imbalances?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_06",
+          "samples": [
+            "I notice my skin becomes oily and breaks out in the summer. Why is that?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_07",
+          "samples": [
+            "How can I balance my Kapha during the monsoon season?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_08",
+          "samples": [
+            "Why do I crave sweet foods during the winter?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_09",
+          "samples": [
+            "Can my diet affect my dosha balance and overall health?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_10",
+          "samples": [
+            "I feel energetic and active in the spring but sluggish in the fall. Why is that?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_PrakritiVikritiSeasons_01",
+          "samples": [
+            "I am always feeling anxious and restless. Could this be related to my Dosha?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_PrakritiVikritiSeasons_02",
+          "samples": [
+            "Why do I experience digestive issues during the winter season?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_PrakritiVikritiSeasons_03",
+          "samples": [
+            "Can my skin conditions be related to my Ayurvedic constitution?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_PrakritiVikritiSeasons_04",
+          "samples": [
+            "I feel fatigued and unmotivated, especially during the rainy season. Why is this happening?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_PrakritiVikritiSeasons_05",
+          "samples": [
+            "How can I maintain a balance during seasonal changes?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_PrakritiVikritiSeasons_06",
+          "samples": [
+            "I notice that I get more colds and allergies in fall. Can my constitution affect this?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_PrakritiVikritiSeasons_07",
+          "samples": [
+            "Why do I feel more irritable and hot-tempered in the summer?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_PrakritiVikritiSeasons_08",
+          "samples": [
+            "I've been gaining weight and feeling sluggish. What could be the underlying Dosha issue?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_PrakritiVikritiSeasons_09",
+          "samples": [
+            "Can my diet affect my Dosha balance throughout the year?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_PrakritiVikritiSeasons_10",
+          "samples": [
+            "I often feel bloated and uncomfortable after meals. What should I consider?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_11",
+          "samples": [
+            "Why do I feel more anxious during the summer months?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_12",
+          "samples": [
+            "Can changes in my diet influence my dosha balance and overall health?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_13",
+          "samples": [
+            "How can I determine my Prakriti and Vikriti?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_14",
+          "samples": [
+            "What should I do if my Vikriti keeps changing every season?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_15",
+          "samples": [
+            "Why do I experience digestive issues in the fall?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_16",
+          "samples": [
+            "How can seasonal changes affect my energy levels?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_17",
+          "samples": [
+            "What lifestyle changes can help me stay balanced during winter?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_18",
+          "samples": [
+            "Is it true that our dosha can change with age?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_19",
+          "samples": [
+            "How do I know if I have an accumulation of Ama in my system?"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DoshaLogic_20",
+          "samples": [
+            "Can stress impact my dosha balance?"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "ayurveda bot"
+    }
+  }
+}
