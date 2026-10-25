@@ -1,0 +1,14 @@
+flask>=3.0
+sentence-transformers
+faiss-cpu
+numpy
+requests
+anthropic
+pymupdf
+# optional providers
+openai
+groq
+edge-tts
+pyttsx3
+pywin32; sys_platform == "win32"
+transformers
