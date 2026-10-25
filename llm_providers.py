@@ -21,7 +21,7 @@ MODELS = [
     {"id": "qwen2.5:7b",                "label": "Qwen 2.5 7B (local)",          "provider": "ollama"},
 ]
 DEFAULT_MODEL = "claude-sonnet-5"
-GROQ_API_KEY="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"
+GROQ_API_KEY=''
 
 
 class ProviderError(Exception):
