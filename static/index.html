@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayurveda RAG – Ask the classical texts</title>
+<link rel="icon" href="img/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#5a8f2e;--g2:#3f6b22;--g3:#2f5219;--tint:#eef5e6;--tint2:#e0eed0;--tx:#26311b;--mu:#66725a;--ln:#dbe6cc;--bg:#fff}
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.65 Nunito,system-ui,sans-serif}
+h1,h2,h3{line-height:1.15;margin:0}
+nav{position:sticky;top:0;z-index:20;background:#fffffff2;backdrop-filter:blur(8px);border-bottom:1px solid var(--ln);display:flex;align-items:center;gap:24px;padding:10px 5vw;overflow-x:auto}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--g3);margin-right:auto;text-decoration:none;white-space:nowrap}
+.brand img{width:34px;height:34px}
+nav a.l{text-decoration:none;color:var(--mu);font-weight:700;font-size:14px;white-space:nowrap}nav a.l:hover{color:var(--g)}
+.tr-wrap{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.tr-box{background:#fff;border:1px dashed var(--ln);border-radius:10px;padding:10px 14px;margin-top:8px;white-space:pre-wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--g);color:#fff;border:2px solid var(--g);border-radius:999px;padding:10px 24px;font:800 15px Nunito,sans-serif;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--g2);border-color:var(--g2)}.btn:disabled{opacity:.5;cursor:default}
+.btn.o{background:#fff;color:var(--g)}.btn.o:hover{background:var(--tint)}.btn.sm{padding:6px 16px;font-size:13px}
+.hero{background:linear-gradient(180deg,var(--tint),#fff);padding:56px 5vw 40px}
+.hero>div{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(34px,5vw,56px);font-weight:800;color:var(--g3);margin-bottom:16px}
+.hero p{color:var(--mu);font-size:18px;max-width:52ch;margin:0 0 26px}
+.hero img{width:100%;max-width:460px;justify-self:center}
+.wrap{max-width:1120px;margin:auto;padding:0 5vw}
+section{padding:64px 0}section.alt{background:var(--tint)}
+.hd{margin-bottom:28px}.hd h2{font-size:34px;font-weight:800;color:var(--g3)}.hd p{color:var(--mu);margin:8px 0 0;max-width:64ch}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:#fff;border:1px solid var(--ln);border-radius:16px;padding:20px;box-shadow:0 4px 18px #5a8f2e14}
+.hex{width:46px;height:46px;background:var(--g);clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%);display:grid;place-items:center;color:#fff;font-size:20px;margin-bottom:12px}
+.card h3{font-size:18px;margin-bottom:4px}.card p{margin:0;color:var(--mu);font-size:14px}
+.stat b{display:block;font-size:32px;font-weight:800;color:var(--g)}.stat span{color:var(--mu);font-size:14px}
+.chat{display:grid;grid-template-columns:270px 1fr;gap:20px;align-items:start}
+label.f{display:block;font-weight:800;font-size:13px;margin:0 0 5px}
+select,input[type=text],input[type=number],textarea{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--ln);border-radius:10px;background:#fff;color:var(--tx)}
+:focus-visible{outline:3px solid #5a8f2e66;outline-offset:1px}
+.fld{margin-bottom:16px}.hint{font-size:12px;color:var(--mu);margin-top:4px}
+.chk{display:flex;gap:8px;align-items:center;font-weight:700;font-size:14px}
+.log{height:440px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;padding:4px 2px 14px}
+.m{max-width:88%;padding:12px 16px;border-radius:16px;white-space:pre-wrap;word-wrap:break-word}
+.m.u{align-self:flex-end;background:var(--g);color:#fff;border-bottom-right-radius:4px}
+.m.a{align-self:flex-start;background:var(--tint);border:1px solid var(--ln);border-bottom-left-radius:4px}
+.m.e{align-self:flex-start;background:#fff4f2;border:1px solid #efc4bd;color:#8a2f22}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;white-space:normal}
+.chip{background:#fff;border:1px solid var(--ln);border-radius:999px;padding:2px 10px;font-size:12px;color:var(--g3)}
+.imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:10px;white-space:normal}
+.imgs a{display:block;text-decoration:none;color:var(--mu);font-size:11px}
+.imgs img{width:100%;height:120px;object-fit:cover;border-radius:10px;border:1px solid var(--ln);background:var(--tint)}
+.bar{display:flex;gap:8px;align-items:center;border-top:1px solid var(--ln);padding-top:14px}
+.ib{flex:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--ln);background:#fff;cursor:pointer;font-size:18px}
+.ib:hover{background:var(--tint)}.ib.on{background:#c0392b;border-color:#c0392b;color:#fff}
+.banner{background:#fff8e1;border:1px solid #f1dc98;color:#6b5510;border-radius:10px;padding:10px 14px;font-size:14px;margin-bottom:14px}
+.banner.err{background:#fff4f2;border-color:#efc4bd;color:#8a2f22}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--ln);vertical-align:top}
+th{background:var(--g3);color:#fff;font-weight:700;white-space:nowrap}
+.tw{overflow-x:auto;border-radius:12px}
+.row2{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(310px,1fr))}
+.card h4{margin:0 0 12px;font-size:16px;color:var(--g3)}
+.empty{color:var(--mu);padding:14px;text-align:center}
+.form{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));align-items:end;margin-top:18px}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid var(--ln);border-top-color:var(--g);border-radius:50%;animation:s .8s linear infinite;vertical-align:-2px;margin-right:6px}
+@keyframes s{to{transform:rotate(360deg)}}
+footer{background:var(--g3);color:#d5e4c4;padding:36px 5vw;text-align:center;font-size:14px}
+@media(max-width:820px){.hero>div,.chat{grid-template-columns:1fr}.hero img{max-width:300px}.log{height:360px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+
+/* ===== motion ===== */
+.hl{position:relative;display:inline-block;width:var(--s,28px);height:var(--s,28px);flex:none}
+.hl img{position:absolute;inset:0;width:100%;height:100%;opacity:0;animation:hlc 5.4s infinite}
+@keyframes hlc{0%{opacity:0;transform:scale(.55) rotate(-30deg)}4%,14%{opacity:1;transform:scale(1) rotate(0)}18%{opacity:0;transform:scale(1.2) rotate(24deg)}100%{opacity:0}}
+.ld{display:inline-flex;align-items:center;gap:10px;color:var(--mu);font-weight:700}
+#splash{position:fixed;inset:0;z-index:100;background:#fff;display:grid;place-items:center;text-align:center;transition:opacity .7s ease,visibility .7s}
+#splash.out{opacity:0;visibility:hidden}
+.sp-in{padding:24px}
+.ring{width:150px;height:150px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;position:relative;background:var(--tint)}
+.ring:before{content:"";position:absolute;inset:-6px;border-radius:50%;border:3px dashed var(--g);animation:rot 14s linear infinite;opacity:.55}
+.ring:after{content:"";position:absolute;inset:-6px;border-radius:50%;border:3px solid transparent;border-top-color:var(--g);animation:rot 1.3s cubic-bezier(.6,.1,.4,.9) infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.sp-in h2{font-size:30px;font-weight:800;color:var(--g3);margin-bottom:6px}
+#sptxt{color:var(--mu);margin:0 0 18px;min-height:26px;animation:fd .5s ease}
+@keyframes fd{from{opacity:0;transform:translateY(6px)}}
+.sp-bar{width:220px;height:5px;border-radius:9px;background:var(--tint2);margin:0 auto;overflow:hidden}
+.sp-bar i{display:block;width:40%;height:100%;background:var(--g);border-radius:9px;animation:bar 1.4s ease-in-out infinite}
+@keyframes bar{0%{transform:translateX(-110%)}100%{transform:translateX(280%)}}
+.hero{position:relative;overflow:hidden}
+.hero>div{position:relative;z-index:1}
+.leaves{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.lf{position:absolute;top:-40px;background:url(img/leaf.svg) center/contain no-repeat;opacity:0;animation:fall linear infinite}
+@keyframes fall{0%{transform:translate(0,0) rotate(0);opacity:0}10%{opacity:.55}50%{transform:translate(40px,260px) rotate(160deg)}90%{opacity:.45}100%{transform:translate(-30px,560px) rotate(340deg);opacity:0}}
+.hero h1,.hero p,.hero .btns{opacity:0;animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1{animation-delay:.15s}.hero p{animation-delay:.4s}.hero .btns{animation-delay:.65s}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hero img.hi{animation:pop 1s cubic-bezier(.2,.9,.3,1.2) .3s both,fl 6s ease-in-out 1.3s infinite}
+@keyframes pop{from{opacity:0;transform:scale(.8) rotate(-6deg)}to{opacity:1;transform:none}}
+@keyframes fl{50%{transform:translateY(-12px)}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease var(--d,0s),transform .7s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+nav a.l{position:relative}nav a.l:after{content:"";position:absolute;left:0;bottom:-5px;height:2px;width:0;background:var(--g);transition:width .28s ease}nav a.l:hover:after{width:100%}
+.btn{transition:transform .2s ease,box-shadow .2s ease,background .2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px #5a8f2e40}.btn:active{transform:translateY(0)}
+.card{transition:box-shadow .3s ease,border-color .3s ease}
+.card.rv{transition:opacity .7s ease var(--d,0s),transform .7s cubic-bezier(.2,.8,.2,1) var(--d,0s),box-shadow .3s ease,border-color .3s ease}
+.grid>.card:hover{box-shadow:0 12px 30px #5a8f2e30;border-color:#bcd79a}
+.hex{transition:transform .5s cubic-bezier(.3,1.4,.5,1)}.card:hover .hex{transform:rotate(60deg) scale(1.08)}
+.m{animation:mp .4s cubic-bezier(.2,.9,.3,1.2)}@keyframes mp{from{opacity:0;transform:translateY(12px) scale(.96)}}
+.ib{position:relative;transition:transform .2s}.ib:hover{transform:scale(1.08)}
+.ib.on:after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid #c0392b;animation:pulse 1.1s ease-out infinite}
+@keyframes pulse{from{transform:scale(1);opacity:.9}to{transform:scale(1.7);opacity:0}}
+.wave{display:inline-flex;gap:3px;align-items:center;height:18px}.wave[hidden]{display:none}
+.wave i{width:4px;height:100%;background:#c0392b;border-radius:3px;animation:wv .9s ease-in-out infinite}
+.wave i:nth-child(2){animation-delay:.15s}.wave i:nth-child(3){animation-delay:.3s}.wave i:nth-child(4){animation-delay:.45s}
+@keyframes wv{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+.gx{transform-box:fill-box;transform-origin:left center;animation:gx .9s cubic-bezier(.2,.8,.2,1) both}
+.gy{transform-box:fill-box;transform-origin:center bottom;animation:gy .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes gx{from{transform:scaleX(0)}}@keyframes gy{from{transform:scaleY(0)}}
+.rv:not(.in) .gx,.rv:not(.in) .gy{animation-play-state:paused}
+.lis{margin-top:10px}
+.imgs a{transition:transform .3s ease}.imgs a:hover{transform:translateY(-4px) scale(1.02)}
+.imgs img{animation:pop .6s ease both}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rv,.hero h1,.hero p,.hero .btns{opacity:1!important;transform:none!important}.hl img:first-child{opacity:1}}
+</style>
+</head>
+<body>
+<div id="splash" role="status" aria-live="polite"><div class="sp-in"><div class="ring"><span id="sphl"></span></div><h2>Ayurveda RAG</h2><p id="sptxt">Grinding the herbs…</p><div class="sp-bar"><i></i></div><p id="sperr" class="hint" style="margin-top:16px"></p><button class="btn o sm" id="spskip" hidden>Continue anyway</button></div></div>
+<nav>
+<a class="brand" href="#top"><img src="img/logo.svg" alt="">Ayurveda RAG</a>
+<a class="l" href="#chat">Ask</a><a class="l" href="#upload">Upload your own</a><a class="l" href="#photos">Herb photos</a><a class="l" href="#dataset">Dataset</a><a class="l" href="#analysis">Analysis</a><a class="l" href="#results">Results</a>
+</nav>
+
+<header class="hero" id="top"><span class="leaves" id="leaves"></span><div>
+<div>
+<h1>Ask the classical Ayurveda texts.</h1>
+<p>Search more than a hundred thousand passages from Ayurvedic books and articles. Every answer cites its source and page, and can be typed, spoken or read aloud.</p>
+<div class="btns"><a class="btn" href="#chat">Ask a question</a> <a class="btn o" href="#photos">Find herb photos</a></div>
+</div>
+<img class="hi" src="img/hero-herbs.svg" alt="Mortar and pestle with fresh herbs">
+</div></header>
+
+<section><div class="wrap">
+<div class="grid">
+<div class="card"><div class="hex">🔎</div><h3>Meaning-based search</h3><p>Your question is embedded with the same sentence-transformer used to index the texts, then re-ranked on exact herb names.</p></div>
+<div class="card"><div class="hex">📖</div><h3>Cited answers</h3><p>The model may only use the retrieved passages, and says so when the texts do not contain an answer.</p></div>
+<div class="card"><div class="hex">🎙</div><h3>Voice in and out</h3><p>Ask with your microphone and listen to the reply in English or Hindi.</p></div>
+<div class="card"><div class="hex">🌿</div><h3>Herb photos</h3><p>Look up reference photographs of any herb, or upload your own for a description.</p></div>
+</div></div></section>
+
+<section class="alt" id="chat"><div class="wrap">
+<div class="hd"><h2>Ask a question</h2><p>Choose the language model, then ask. Add “photos of tulsi” to a question to see reference images alongside the answer.</p></div>
+<div id="banner"></div>
+<div class="chat">
+<div class="card">
+<div class="fld"><label class="f" for="model">Language model</label><select id="model"></select><div class="hint" id="mhint"></div></div>
+<div class="fld"><label class="f" for="topk">Passages to retrieve</label><select id="topk"><option>3</option><option selected>5</option><option>8</option></select></div>
+<div class="fld"><label class="f" for="lang">Voice language</label><select id="lang"><option value="en-US">English (US)</option><option value="en-IN">English (India)</option><option value="hi-IN">Hindi</option></select></div>
+<label class="chk"><input type="checkbox" id="tts"> Read answers aloud</label>
+</div>
+<div class="card">
+<div class="log" id="log" aria-live="polite"><div class="m a">Namaste. Ask me about herbs, doshas, treatments or the classical texts.</div></div>
+<div class="bar"><button class="ib" id="mic" title="Speak your question" aria-label="Speak your question">🎤</button>
+<input type="text" id="q" placeholder="For example: What is Ajirna and how is it treated?" aria-label="Your question"><button class="btn" id="send">Ask</button></div>
+<div class="hint" style="display:flex;gap:10px;align-items:center;min-height:24px;margin-top:8px"><span class="wave" id="wave" hidden><i></i><i></i><i></i><i></i></span><span id="st"></span></div>
+</div></div></div></section>
+
+<section id="upload"><div class="wrap">
+<div class="hd"><h2>Upload your own text</h2><p>Upload a .txt or .pdf file to ask questions against it directly. Uploads stay separate from the main corpus - they are never added to the shared knowledge base, and are cleared automatically after a couple of hours of inactivity.</p></div>
+<div class="card">
+<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+<input type="file" id="ufile" accept=".txt,.pdf" aria-label="Upload a text or PDF file">
+<button class="btn" id="ugoup">Upload &amp; analyse</button>
+</div>
+<div class="hint" id="ust"></div>
+<div id="uanalysis" style="margin-top:14px"></div>
+</div>
+<div class="card" id="uqaCard" style="display:none;margin-top:18px">
+<h4>Ask about this file</h4>
+<div class="log" id="ulog" aria-live="polite"></div>
+<div class="bar"><input type="text" id="uq" placeholder="Ask a question about the uploaded file" aria-label="Question about the uploaded file"><button class="btn" id="usend">Ask</button></div>
+</div>
+</div></section>
+
+<section id="photos"><div class="wrap">
+<div class="hd"><h2>Herb photos</h2><p>Reference photographs come from Wikimedia Commons. To get a description of your own plant photo, upload it below. It is a guide only, never a confirmed identification.</p></div>
+<div class="card">
+<div style="display:flex;gap:10px;flex-wrap:wrap"><input type="text" id="herb" placeholder="Herb name, for example ashwagandha" style="flex:1;min-width:220px" aria-label="Herb name"><button class="btn" id="hgo">Search photos</button></div>
+<div id="hres"></div>
+<hr style="border:0;border-top:1px solid var(--ln);margin:22px 0">
+<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><input type="file" id="up" accept="image/*" aria-label="Plant photo"><button class="btn o" id="ugo">Describe my photo</button></div>
+<div class="m a" id="ures" style="display:none;margin-top:14px;max-width:100%"></div>
+</div></div></section>
+
+<section class="alt" id="dataset"><div class="wrap">
+<div class="hd"><h2>Dataset</h2><p>The corpus behind every answer: cleaned text chunks from books and web articles, each with its source, category and page.</p></div>
+<div class="grid" id="dstats" style="margin-bottom:22px"></div>
+<div class="card" style="margin-bottom:18px"><h4>Largest sources</h4><div id="dsrc"><div class="empty ldr"></div></div></div>
+<div class="card"><h4>Browse passages</h4>
+<div style="display:flex;gap:10px;margin-bottom:12px"><input type="text" id="ds" placeholder="Search passages or sources, for example triphala" aria-label="Search passages"><button class="btn" id="dgo">Search</button></div>
+<div class="hint" id="dcount" style="margin-bottom:8px"></div>
+<div class="tw"><table><thead><tr><th>Source</th><th>Category</th><th>Page</th><th>Passage</th></tr></thead><tbody id="dt"></tbody></table></div></div>
+</div></section>
+
+<section id="analysis"><div class="wrap">
+<div class="hd"><h2>Data analysis</h2><p>How the corpus is composed. The figures are calculated from the loaded corpus, so they update when your data changes.</p></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px"><button class="btn o sm" id="arf">Recalculate</button><a class="btn o sm" href="/report" target="_blank" rel="noopener">Open full report</a><span class="hint" id="agen"></span></div>
+<div class="row2">
+<div class="card"><h4>Chunks per category</h4><div id="c1"></div></div>
+<div class="card"><h4>Chunks per source</h4><div id="c2"></div></div>
+<div class="card"><h4>Chunk length (words)</h4><div id="c3"></div></div>
+<div class="card"><h4>Script mix</h4><div id="c4"></div></div>
+<div class="card"><h4>OCR confidence (pages)</h4><div id="c5"></div></div>
+<div class="card"><h4>Most frequent words</h4><div id="c6"></div></div>
+</div>
+<div class="card" style="margin-top:18px"><h4>Lowest-confidence OCR chunks, worth checking by hand</h4><div class="tw"><table><thead><tr><th>Source</th><th>Page</th><th>Confidence</th><th>Snippet</th></tr></thead><tbody id="lowc"></tbody></table></div></div>
+</div></section>
+
+<section class="alt" id="results"><div class="wrap">
+<div class="hd"><h2>Published results</h2><p>Evaluation results for this dataset. Add a row after each experiment; rows are saved on the server in <code>data/results.json</code>.</p></div>
+<div class="card"><div class="tw"><table><thead><tr><th>Experiment</th><th>Model</th><th>Recall@k</th><th>Accuracy</th><th>Faithfulness</th><th>Latency (s)</th><th>Date</th><th>Notes</th><th></th></tr></thead><tbody id="rt"></tbody></table></div>
+<form class="form" id="rf">
+<div><label class="f" for="r0">Experiment name</label><input type="text" id="r0" required></div>
+<div><label class="f" for="r1">Model</label><input type="text" id="r1" required></div>
+<div><label class="f" for="r2">Recall@k (0–1)</label><input type="number" id="r2" step="0.01" min="0" max="1" required></div>
+<div><label class="f" for="r3">Accuracy (0–1)</label><input type="number" id="r3" step="0.01" min="0" max="1" required></div>
+<div><label class="f" for="r4">Faithfulness (0–1)</label><input type="number" id="r4" step="0.01" min="0" max="1" required></div>
+<div><label class="f" for="r5">Latency (s)</label><input type="number" id="r5" step="0.1" min="0" required></div>
+<div style="grid-column:1/-1"><label class="f" for="r6">Notes</label><input type="text" id="r6"></div>
+<button class="btn" type="submit">Publish result</button>
+</form></div>
+<div class="card" style="margin-top:18px"><h4>Accuracy by experiment</h4><div id="rc"></div></div>
+</div></section>
+
+<footer>Ayurveda RAG · RMIT Case Studies in Data Science · Educational use only, not medical advice.</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function api(url,opt){const r=await fetch(url,opt);let d={};try{d=await r.json()}catch(e){}if(!r.ok)throw new Error(d.error||('Request failed ('+r.status+')'));return d}
+const G='#5a8f2e';
+const HERBS=['tulsi','neem','turmeric','ashwagandha','ginger','amla'];
+const REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function loader(text,size){return '<span class="ld"><span class="hl" style="--s:'+(size||28)+'px">'+HERBS.map((h,i)=>`<img src="img/herbs/${h}.svg" alt="" style="animation-delay:${i*.9}s">`).join('')+'</span>'+(text?'<span>'+esc(text)+'</span>':'')+'</span>'}
+function countUp(root){(root||document).querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n,dec=n%1?1:0;if(REDUCED){el.textContent=n.toLocaleString(undefined,{maximumFractionDigits:dec});return}const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/1300),e=1-Math.pow(1-p,3);el.textContent=(n*e).toLocaleString(undefined,{maximumFractionDigits:dec});if(p<1)requestAnimationFrame(f)})(t0)})}
+
+/* ---------- status + models ---------- */
+const MSGS=['Grinding the herbs…','Reading the classical texts…','Brewing the embeddings…','Sorting the passages…','Warming up the search model…'];let mi=0;
+setInterval(()=>{const sp=$('splash');if(sp&&!sp.classList.contains('out')){mi=(mi+1)%MSGS.length;const t=$('sptxt');t.style.animation='none';t.offsetHeight;t.style.animation='';t.textContent=MSGS[mi]}},2400);
+function hideSplash(){$('splash').classList.add('out');setTimeout(()=>$('splash').remove(),900)}
+$('spskip').onclick=hideSplash;
+async function checkStatus(){try{const s=await api('/api/status');
+ if(s.error){$('sptxt').textContent='The search index could not be loaded.';$('sperr').textContent=s.error+' Check the paths in config.py and restart.';$('spskip').hidden=false;return}
+ if(!s.ready){setTimeout(checkStatus,2000);return}
+ hideSplash();loadDataset();loadAnalysis()}catch(e){setTimeout(checkStatus,2500)}}
+async function loadModels(){try{const d=await api('/api/models');const by={};d.models.forEach(m=>(by[m.provider]=by[m.provider]||[]).push(m));
+ const names={anthropic:'Anthropic Claude',openai:'OpenAI',groq:'Groq (free)',ollama:'Local (Ollama)'};
+ $('model').innerHTML=Object.entries(by).map(([p,ms])=>`<optgroup label="${names[p]||p}">`+ms.map(m=>`<option value="${esc(m.id)}" ${m.available?'':'disabled'} data-h="${esc(m.hint)}">${esc(m.label)}${m.available?'':' – unavailable'}</option>`).join('')+'</optgroup>').join('');
+ const saved=localStorage.getItem('model');const ok=d.models.find(m=>m.id===saved&&m.available)||d.models.find(m=>m.id===d.default&&m.available)||d.models.find(m=>m.available);
+ if(ok)$('model').value=ok.id;else $('mhint').textContent='No model available. Set ANTHROPIC_API_KEY and restart.';
+ }catch(e){$('mhint').textContent=e.message}}
+$('model').onchange=()=>localStorage.setItem('model',$('model').value);
+
+/* ---------- chat ---------- */
+const log=$('log');let busy=false,lastAnswer='';
+function add(cls,html){const d=document.createElement('div');d.className='m '+cls;d.innerHTML=html;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+let curAudio=null;
+function stopAudio(){if(curAudio){curAudio.pause();curAudio=null}document.querySelectorAll('.lis').forEach(x=>x.textContent='🔊 Listen')}
+async function speak(text,btn){stopAudio();if(btn)btn.innerHTML=loader('',20);
+ try{const r=await fetch('/api/tts',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text,lang:$('lang').value})});
+  if(!r.ok){let m='Text to speech failed.';try{m=(await r.json()).error}catch(e){}throw new Error(m)}
+  const a=new Audio(URL.createObjectURL(await r.blob()));curAudio=a;a.onended=()=>{if(curAudio===a){curAudio=null}if(btn)btn.textContent='🔊 Listen'};
+  await a.play();if(btn)btn.textContent='⏹ Stop'}
+ catch(e){if(btn)btn.textContent='🔊 Listen';$('st').textContent=e.message}}
+function imgs(list){return '<div class="imgs">'+list.map(i=>`<a href="${esc(i.description_url||i.full_url)}" target="_blank" rel="noopener"><img src="${esc(i.url)}" alt="${esc(i.title)}" loading="lazy" onerror="this.src='img/herb-placeholder.svg'">${esc(i.title.slice(0,32))}</a>`).join('')+'</div>'}
+async function ask(){const q=$('q').value.trim();if(!q||busy)return;busy=true;$('send').disabled=true;$('q').value='';
+ add('u',esc(q));const w=add('a',loader('Searching the texts…',34));
+ try{const d=await api('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,model:$('model').value,top_k:+$('topk').value})});
+  let h=esc(d.answer);
+  if(d.sources&&d.sources.length)h+='<div class="meta">'+d.sources.map(s=>`<span class="chip" title="${esc(s.snippet)}">${esc(String(s.source).slice(0,34))} · p.${esc(s.page)} · ${s.score.toFixed(2)}</span>`).join('')+'</div>';
+  if(d.images&&d.images.length)h+=imgs(d.images);
+  else if(d.image_query)h+=`<div class="hint">No photos found for “${esc(d.image_query)}”.</div>`;
+  h+=`<div class="hint">Model: ${esc(d.model)}</div><button class="btn o sm lis">🔊 Listen</button>`;
+  w.innerHTML=h;lastAnswer=d.answer;const lb=w.querySelector('.lis');
+  lb.onclick=()=>lb.textContent.includes('Stop')?stopAudio():speak(d.answer,lb);if($('tts').checked)speak(d.answer,lb);
+  addTranslateUI(w,d.answer)}
+ catch(e){w.className='m e';w.textContent=e.message}
+ busy=false;$('send').disabled=false;log.scrollTop=log.scrollHeight}
+$('send').onclick=ask;$('q').onkeydown=e=>{if(e.key==='Enter')ask()};
+$('tts').onchange=e=>{if(!e.target.checked)stopAudio()};
+
+/* ---------- speech to text (recorded here, transcribed by Whisper in Python) ---------- */
+async function toWav16k(blob){const ctx=new (window.AudioContext||window.webkitAudioContext)();const buf=await ctx.decodeAudioData(await blob.arrayBuffer());ctx.close();
+ const off=new OfflineAudioContext(1,Math.max(1,Math.ceil(buf.duration*16000)),16000);const src=off.createBufferSource();src.buffer=buf;src.connect(off.destination);src.start();
+ const pcm=(await off.startRendering()).getChannelData(0),v=new DataView(new ArrayBuffer(44+pcm.length*2)),w=(o,t)=>[...t].forEach((c,i)=>v.setUint8(o+i,c.charCodeAt(0)));
+ w(0,'RIFF');v.setUint32(4,36+pcm.length*2,true);w(8,'WAVEfmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,16000,true);v.setUint32(28,32000,true);v.setUint16(32,2,true);v.setUint16(34,16,true);w(36,'data');v.setUint32(40,pcm.length*2,true);
+ pcm.forEach((x,i)=>v.setInt16(44+i*2,Math.max(-1,Math.min(1,x))*32767,true));return new Blob([v],{type:'audio/wav'})}
+let rec=null;
+async function startRec(){stopAudio();let stream;try{stream=await navigator.mediaDevices.getUserMedia({audio:true})}catch(e){$('st').textContent='Microphone blocked. Allow it in the browser address bar.';return}
+ const mr=new MediaRecorder(stream),parts=[];mr.ondataavailable=e=>parts.push(e.data);
+ mr.onstop=async()=>{stream.getTracks().forEach(t=>t.stop());$('mic').classList.remove('on');$('wave').hidden=true;$('st').innerHTML=loader('Transcribing…',24);
+  try{const fd=new FormData();fd.append('audio',await toWav16k(new Blob(parts)),'q.wav');fd.append('lang',$('lang').value);
+   const d=await api('/api/stt',{method:'POST',body:fd});$('st').textContent='';$('q').value=d.text;if(d.text)ask();else $('st').textContent='No speech was recognised. Try again.'}
+  catch(e){$('st').textContent=e.message}};
+ mr.start();rec=mr;$('mic').classList.add('on');$('wave').hidden=false;$('st').textContent='Recording. Tap the microphone again to stop.';
+ setTimeout(()=>{if(mr.state==='recording')mr.stop()},30000)}
+$('mic').onclick=()=>{if(rec&&rec.state==='recording'){rec.stop();rec=null}else startRec()};
+
+/* ---------- herb photos ---------- */
+async function herbSearch(){const h=$('herb').value.trim();if(!h)return;$('hres').innerHTML='<div class="empty">'+loader('Finding photos…',40)+'</div>';
+ try{const d=await api('/api/images?herb='+encodeURIComponent(h));$('hres').innerHTML=d.images.length?imgs(d.images):'<div class="empty">No photos found. Try the Latin name.</div>'}
+ catch(e){$('hres').innerHTML=`<div class="banner err">${esc(e.message)}</div>`}}
+$('hgo').onclick=herbSearch;$('herb').onkeydown=e=>{if(e.key==='Enter')herbSearch()};
+$('ugo').onclick=async()=>{const f=$('up').files[0];if(!f)return;const o=$('ures');o.style.display='block';o.innerHTML=loader('Looking at your photo…',30);
+ const fd=new FormData();fd.append('image',f);fd.append('model',$('model').value);
+ try{const d=await api('/api/identify',{method:'POST',body:fd});o.textContent=d.description}catch(e){o.className='m e';o.textContent=e.message}};
+
+/* ---------- translation (works on any answer bubble, chat or upload) ---------- */
+function addTranslateUI(wrapper,text){
+ const box=document.createElement('div');box.className='tr-wrap';
+ box.innerHTML='<select class="tsel" style="width:auto;padding:6px 10px"><option>Sanskrit</option><option>Arabic</option><option>Chinese</option><option>Hindi</option></select><button class="btn o sm ttr">Translate</button>';
+ wrapper.appendChild(box);
+ box.querySelector('.ttr').onclick=async(ev)=>{const btn=ev.target;btn.disabled=true;btn.textContent='Translating…';
+  try{const d=await api('/api/translate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text,target_language:box.querySelector('.tsel').value,model:$('model').value})});
+   const out=document.createElement('div');out.className='tr-box';out.innerHTML='<div class="banner">'+esc(d.disclaimer)+'</div>'+esc(d.translation);wrapper.appendChild(out)}
+  catch(e){const out=document.createElement('div');out.className='banner err';out.textContent=e.message;wrapper.appendChild(out)}
+  btn.disabled=false;btn.textContent='Translate'}}
+
+/* ---------- upload your own file ---------- */
+let currentUploadId=null;
+$('ugoup').onclick=async()=>{const f=$('ufile').files[0];if(!f)return;
+ $('ust').innerHTML=loader('Reading and indexing your file…',28);$('uanalysis').innerHTML='';$('uqaCard').style.display='none';
+ const fd=new FormData();fd.append('file',f);
+ try{const d=await api('/api/upload',{method:'POST',body:fd});
+  currentUploadId=d.upload_id;$('ust').textContent=`Indexed "${d.filename}" – ${d.chunk_count} chunks across ${d.pages} page(s).`;
+  const a=d.analysis;
+  $('uanalysis').innerHTML=`<div class="grid"><div class="card stat"><b>${a.total_chunks}</b><span>chunks</span></div><div class="card stat"><b>${a.total_words}</b><span>words</span></div><div class="card stat"><b>${a.avg_words}</b><span>avg words/chunk</span></div></div>`;
+  $('ulog').innerHTML='<div class="m a">File indexed. Ask a question about it below.</div>';
+  $('uqaCard').style.display='block'}
+ catch(e){$('ust').innerHTML=`<div class="banner err">${esc(e.message)}</div>`}};
+
+const ulog=$('ulog');let ubusy=false;
+function uadd(cls,html){const d=document.createElement('div');d.className='m '+cls;d.innerHTML=html;ulog.appendChild(d);ulog.scrollTop=ulog.scrollHeight;return d}
+async function uask(){const q=$('uq').value.trim();if(!q||ubusy||!currentUploadId)return;ubusy=true;$('usend').disabled=true;$('uq').value='';
+ uadd('u',esc(q));const w=uadd('a',loader('Searching your file…',30));
+ try{const d=await api('/api/ask_uploaded',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({upload_id:currentUploadId,question:q,model:$('model').value})});
+  let h=esc(d.answer);
+  if(d.sources&&d.sources.length)h+='<div class="meta">'+d.sources.map(s=>`<span class="chip" title="${esc(s.snippet)}">p.${esc(s.page)} · ${s.score.toFixed(2)}</span>`).join('')+'</div>';
+  w.innerHTML=h;addTranslateUI(w,d.answer)}
+ catch(e){w.className='m e';w.textContent=e.message}
+ ubusy=false;$('usend').disabled=false}
+$('usend').onclick=uask;$('uq').onkeydown=e=>{if(e.key==='Enter')uask()};
+
+/* ---------- charts (inline SVG) ---------- */
+function hbars(el,rows,fmt){if(!rows||!rows.length){$(el).innerHTML='<div class="empty">No data.</div>';return}
+ const max=Math.max(...rows.map(r=>r[1])),rh=28,W=440;
+ $(el).innerHTML=`<svg viewBox="0 0 ${W} ${rows.length*rh+4}" width="100%" role="img">`+rows.map((r,i)=>{const bw=Math.max(2,r[1]/max*(W-210));
+ return `<text x="0" y="${i*rh+18}" font-size="12" fill="#26311b">${esc(String(r[0]).slice(0,26))}</text><rect class="gx" style="animation-delay:${i*45}ms" x="165" y="${i*rh+4}" width="${bw}" height="18" rx="4" fill="${G}"/><text x="${171+bw}" y="${i*rh+18}" font-size="11" fill="#66725a">${fmt?fmt(r[1]):r[1].toLocaleString()}</text>`}).join('')+'</svg>'}
+function hist(el,h){if(!h||!h.counts.length){$(el).innerHTML='<div class="empty">No data.</div>';return}
+ const W=440,H=190,b=h.counts.length,max=Math.max(...h.counts),bw=(W-30)/b;
+ $(el).innerHTML=`<svg viewBox="0 0 ${W} ${H+24}" width="100%" role="img">`+h.counts.map((c,i)=>`<rect class="gy" style="animation-delay:${i*30}ms" x="${26+i*bw}" y="${H-c/max*H}" width="${bw-2}" height="${c/max*H}" fill="${G}" rx="2"><title>${h.edges[i]}–${h.edges[i+1]}: ${c}</title></rect>`).join('')+
+ `<line x1="26" y1="${H}" x2="${W}" y2="${H}" stroke="#dbe6cc"/><text x="26" y="${H+16}" font-size="11" fill="#66725a">${h.edges[0]}</text><text x="${W}" y="${H+16}" font-size="11" fill="#66725a" text-anchor="end">${h.edges[b]}</text></svg>`}
+function donut(el,obj){const e=Object.entries(obj),t=e.reduce((a,x)=>a+x[1],0);if(!t){$(el).innerHTML='<div class="empty">No data.</div>';return}
+ const cols=['#2f5219','#8bbf55','#c9e0a8'];let off=0;const R=60,C=2*Math.PI*R;
+ $(el).innerHTML=`<div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap"><svg viewBox="0 0 160 160" width="160"><g transform="rotate(-90 80 80)">`+e.map((x,i)=>{const l=x[1]/t*C,s=`<circle cx="80" cy="80" r="${R}" fill="none" stroke="${cols[i%3]}" stroke-width="28" stroke-dasharray="${l} ${C-l}" stroke-dashoffset="${-off}"/>`;off+=l;return s}).join('')+'</g></svg><div>'+e.map((x,i)=>`<div><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:${cols[i%3]};margin-right:8px"></span>${esc(x[0])}: ${(x[1]/t*100).toFixed(1)}%</div>`).join('')+'</div></div>'}
+
+/* ---------- analysis ---------- */
+async function loadAnalysis(refresh){$('agen').innerHTML=loader('Calculating…',24);
+ try{const a=await api('/api/analysis'+(refresh?'?refresh=1':''));$('agen').textContent='Calculated '+(a.generated||'');
+ hbars('c1',a.categories);hbars('c2',a.sources);hist('c3',a.length_hist);donut('c4',a.scripts);
+ a.ocr_hist.counts.length?hist('c5',a.ocr_hist):$('c5').innerHTML='<div class="empty">No OCR data in this corpus.</div>';hbars('c6',a.top_words);
+ $('lowc').innerHTML=a.low_conf.length?a.low_conf.map(c=>`<tr><td>${esc(c.source)}</td><td>${esc(c.page)}</td><td>${c.confidence}</td><td>${esc(c.snippet)}</td></tr>`).join(''):'<tr><td colspan="4" class="empty">No low-confidence chunks.</td></tr>';
+ const st=[[a.total_chunks,'text chunks'],[a.unique_sources,'sources'],[a.unique_categories,'categories'],[a.total_words,'words'],[a.avg_words,'average words per chunk'],[a.ocr_used,'OCR-read chunks']];
+ $('dstats').innerHTML=st.map(s=>`<div class="card stat rv in"><b data-n="${s[0]}">0</b><span>${s[1]}</span></div>`).join('');countUp($('dstats'));
+ hbars('dsrc',a.sources.slice(0,8))}catch(e){$('agen').textContent=e.message}}
+$('arf').onclick=()=>loadAnalysis(true);
+
+/* ---------- dataset browser ---------- */
+async function loadDataset(){try{const q=$('ds').value.trim();const d=await api('/api/dataset?q='+encodeURIComponent(q));
+ $('dcount').textContent=q?`${d.total.toLocaleString()} passages match. Showing the first ${d.rows.length}.`:'A random sample of passages. Search to narrow down.';
+ $('dt').innerHTML=d.rows.length?d.rows.map(r=>`<tr><td>${esc(String(r.source).slice(0,40))}</td><td>${esc(r.category)}</td><td>${esc(r.page)}</td><td>${esc(r.text)}</td></tr>`).join(''):'<tr><td colspan="4" class="empty">No passages match.</td></tr>'}catch(e){$('dcount').textContent=e.message}}
+$('dgo').onclick=loadDataset;$('ds').onkeydown=e=>{if(e.key==='Enter')loadDataset()};
+
+/* ---------- results ---------- */
+async function loadResults(){const rows=await api('/api/results').catch(()=>[]);
+ $('rt').innerHTML=rows.length?rows.map(r=>`<tr><td>${esc(r.name)}</td><td>${esc(r.model)}</td><td>${r.recall}</td><td>${r.accuracy}</td><td>${r.faithfulness}</td><td>${r.latency}</td><td>${esc(r.date)}</td><td>${esc(r.notes)}</td><td><button class="btn o sm" data-id="${r.id}" aria-label="Remove result">Remove</button></td></tr>`).join(''):'<tr><td colspan="9" class="empty">No results published yet. Add your first experiment below.</td></tr>';
+ hbars('rc',rows.map(r=>[r.name,r.accuracy]),v=>(v*100).toFixed(0)+'%');
+ document.querySelectorAll('#rt button').forEach(b=>b.onclick=async()=>{if(confirm('Remove this result?')){await api('/api/results/'+b.dataset.id,{method:'DELETE'});loadResults()}})}
+$('rf').onsubmit=async e=>{e.preventDefault();try{await api('/api/results',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:$('r0').value,model:$('r1').value,recall:$('r2').value,accuracy:$('r3').value,faithfulness:$('r4').value,latency:$('r5').value,notes:$('r6').value})});e.target.reset();loadResults()}catch(x){alert(x.message)}};
+
+/* ---------- start-up + reveal on scroll ---------- */
+$('sphl').innerHTML=loader('',96);
+document.querySelectorAll('.ldr').forEach(e=>e.innerHTML=loader('Loading…',34));
+const lv=$('leaves');for(let i=0;i<10;i++){const e=document.createElement('i');e.className='lf';const z=14+Math.random()*16;e.style.cssText=`left:${Math.random()*100}%;width:${z}px;height:${z}px;animation-duration:${9+Math.random()*8}s;animation-delay:${-Math.random()*14}s`;lv.appendChild(e)}
+if(!REDUCED&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+ document.querySelectorAll('.hd,.card,.grid>*').forEach(e=>{if(e.closest('.stat'))return;e.classList.add('rv');const sib=[...e.parentElement.children].indexOf(e);e.style.setProperty('--d',(Math.min(sib,5)*.08)+'s');io.observe(e)})}
+loadModels();checkStatus();loadResults();
+</script>
+</body>
+</html>

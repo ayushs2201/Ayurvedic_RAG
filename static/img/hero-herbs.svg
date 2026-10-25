@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 460">
+<style>.sw{transform-origin:270px 250px;animation:sw 5s ease-in-out infinite alternate}.s2{animation-delay:-1.6s}.s3{animation-delay:-3s}@keyframes sw{from{transform:rotate(-3.5deg)}to{transform:rotate(3.5deg)}}
+.pe{transform-origin:406px 292px;animation:pe 3.2s ease-in-out infinite alternate}@keyframes pe{from{transform:rotate(-4deg)}to{transform:rotate(5deg)}}
+.gl{animation:gl 3s ease-in-out infinite alternate}@keyframes gl{from{opacity:.5}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<circle cx="270" cy="230" r="205" fill="#eef5e6"/><circle class="gl" cx="270" cy="230" r="150" fill="#e0eed0"/>
+<g class="sw"><path d="M250 250C215 190 190 130 185 80" stroke="#5a8f2e" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M185 84c-38-4-58-34-56-62 40 6 58 30 56 62z" fill="#6da53a"/><path d="M188 120c34-8 52-34 48-60-36 6-52 28-48 60z" fill="#8bbf55"/></g>
+<g class="sw s2"><path d="M280 250C300 180 335 120 380 90" stroke="#5a8f2e" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M380 92c34 0 58-22 62-52-38 0-60 22-62 52z" fill="#6da53a"/><path d="M340 130c-34 4-58-14-64-42 36-4 60 14 64 42z" fill="#8bbf55"/></g>
+<g class="sw s3"><path d="M265 250C268 180 262 120 268 60" stroke="#5a8f2e" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M268 64c-26-14-30-40-16-58 24 12 28 38 16 58z" fill="#6da53a"/><path d="M270 100c24-10 38-30 34-50-24 8-36 28-34 50z" fill="#8bbf55"/></g>
+<path d="M120 250h300c0 84-56 140-150 140S120 334 120 250z" fill="#3f6b22"/><path d="M120 250h300v22H120z" fill="#537f2e"/><rect x="160" y="388" width="220" height="20" rx="10" fill="#2f5219"/>
+<g transform="rotate(28 400 190)"><g class="pe"><rect x="392" y="90" width="28" height="200" rx="14" fill="#8a5a2b"/><ellipse cx="406" cy="292" rx="24" ry="16" fill="#6d4520"/></g></g>
+<g fill="#e6b13a"><circle cx="205" cy="262" r="9"/><circle cx="235" cy="272" r="7"/><circle cx="330" cy="265" r="8"/></g><g fill="#a86a3c"><circle cx="300" cy="272" r="7"/><circle cx="180" cy="278" r="6"/></g>
+</svg>
